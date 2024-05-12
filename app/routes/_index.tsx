@@ -1,8 +1,8 @@
 import type { MetaFunction } from "@remix-run/node"
-import { ModeToggle } from "~/components/mode-togle"
+
 import Name from "~/components/pageInitalName.tsx/Name"
 import Img from "~/assets/tifanypfp.jpeg"
-import { Link } from "@remix-run/react"
+import Nav from "~/components/navbar/Nav"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -17,20 +17,9 @@ export const meta: MetaFunction = () => {
 export default function Index() {
 	return (
 		<div className="p-8 flex items-center flex-col w-full">
-			<div className="flex w-full justify-between">
-				<ModeToggle />
+			<Nav />
 
-				<div className="flex gap-x-2">
-					<Link prefetch="intent" to={"/about"}>
-						Sobre
-					</Link>
-					<Link prefetch="intent" to={"/projects"}>
-						Projetos
-					</Link>
-				</div>
-			</div>
-
-			<section className="flex items-center gap-x-8">
+			<section className="mt-52 flex items-center gap-x-8">
 				<Name />
 				<img
 					src={Img}
