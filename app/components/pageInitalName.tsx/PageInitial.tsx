@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react"
-import { FileDown, Github, Linkedin } from "lucide-react"
+import { FileDown, Github, Linkedin, Twitter } from "lucide-react"
 import { Button } from "../ui/button"
 
 export default function Name() {
@@ -21,6 +21,11 @@ export default function Name() {
 						to={"https://www.linkedin.com/in/tifanyanunes/"}
 						className="hover:text-primary">
 						<Linkedin />
+					</Link>
+					<Link
+						to={"https://twitter.com/pinuyadev"}
+						className="hover:text-primary">
+						<Twitter />
 					</Link>
 				</div>
 
