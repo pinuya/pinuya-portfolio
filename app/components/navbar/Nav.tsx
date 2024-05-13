@@ -15,6 +15,10 @@ const routes = [
 		title: "Projetos",
 		to: "/projects",
 	},
+	{
+		title: "Blog",
+		to: "/blog",
+	},
 ]
 
 export default function Nav() {
@@ -23,7 +27,7 @@ export default function Nav() {
 		<div className="flex w-full justify-between pb-2 border-b bg-card">
 			<ModeToggle />
 
-			<div className="flex gap-x-6 font-semibold lowercase">
+			<div className="flex gap-x-4 font-semibold">
 				{routes.map((route) => (
 					<Link
 						key={route.to}

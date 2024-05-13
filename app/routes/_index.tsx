@@ -18,7 +18,7 @@ export default function Index() {
 		<div className="p-8 flex items-center flex-col w-full">
 			<Nav />
 
-			<section className="mt-52 flex items-center gap-x-8">
+			<section className="mt-52 flex items-center gap-x-56">
 				<PageInitial />
 				<img src={Img} alt="imagem" className="rounded-full w-60 h-60" />
 			</section>
