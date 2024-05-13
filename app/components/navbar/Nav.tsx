@@ -20,10 +20,10 @@ const routes = [
 export default function Nav() {
 	const location = useLocation()
 	return (
-		<div className="flex w-full justify-between pb-2 border-b bg-card shadow">
+		<div className="flex w-full justify-between pb-2 border-b bg-card">
 			<ModeToggle />
 
-			<div className="flex gap-x-2 font-semibold lowercase">
+			<div className="flex gap-x-6 font-semibold lowercase">
 				{routes.map((route) => (
 					<Link
 						key={route.to}

@@ -1,7 +1,6 @@
 import type { MetaFunction } from "@remix-run/node"
-
-import Name from "~/components/pageInitalName.tsx/Name"
 import Img from "~/assets/tifanypfp.jpeg"
+import PageInitial from "~/components/pageInitalName.tsx/PageInitial"
 import Nav from "~/components/navbar/Nav"
 
 export const meta: MetaFunction = () => {
@@ -20,12 +19,8 @@ export default function Index() {
 			<Nav />
 
 			<section className="mt-52 flex items-center gap-x-8">
-				<Name />
-				<img
-					src={Img}
-					alt="vai tomar no cu biome"
-					className="rounded-full w-60 h-60"
-				/>
+				<PageInitial />
+				<img src={Img} alt="imagem" className="rounded-full w-60 h-60" />
 			</section>
 		</div>
 	)
