@@ -1,6 +1,6 @@
 export default function Info() {
 	return (
-		<section className="mt-12 justify-center gap-20 flex flex-row">
+		<section className="mt-12 gap-20">
 			<div className="flex flex-col flex-1">
 				<h1 className="text-3xl self-center text-primary">Sobre</h1>
 				<p className="mt-8">
@@ -20,7 +20,15 @@ export default function Info() {
 			</div>
 
 			<div className="flex flex-col flex-1">
-				<h1 className="text-3xl self-center text-primary">Tecnologias</h1>
+				<h1 className="text-3xl self-center text-primary">Skills</h1>
+			</div>
+
+			<div>
+				<h1>Experiência</h1>
+			</div>
+
+			<div>
+				<h1>Certificados</h1>
 			</div>
 		</section>
 	)

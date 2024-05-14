@@ -7,13 +7,13 @@ export default function About() {
 			<Nav />
 
 			<div className="mt-12">
-				<h1 className="text-7xl font-semibold">
-					Tifany
-					<span className="text-primary"> Alves</span>
-				</h1>
-				<h2 className="text-3xl flex gap-2 justify-center">
-					Desenvolvedora <span className="text-primary"> Full-Stack</span>
-				</h2>
+				<h1 className="text-3xl font-semibold">Ola, me chamo Tifany</h1>
+				<div className="text-3xl flex gap-2 justify-center">
+					<p className="text-sm mt-2">
+						Sou desenvolvedora <span className="font-semibold">Full Stack</span>
+						, amo tecnologia, <br /> desenvolver sistemas e colecionar figures.
+					</p>
+				</div>
 			</div>
 
 			<div>
