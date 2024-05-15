@@ -4,7 +4,7 @@ import { FileDown, MoveRight } from "lucide-react"
 
 export default function PageInitial() {
 	return (
-		<div className="">
+		<div>
 			<h1 className="font-semibold text-4xl">Tifany Alves</h1>
 			<p className="text-sm mt-2">
 				Oi, sou desenvolvedora <span className="font-semibold">Full Stack</span>
