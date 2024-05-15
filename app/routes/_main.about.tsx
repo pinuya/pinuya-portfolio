@@ -10,9 +10,7 @@ import Img1 from "~/assets/tifanypfp.jpeg"
 
 export default function About() {
 	return (
-		<div className="p-8 flex items-center flex-col w-full">
-			<Nav />
-
+		<div>
 			<div className="mt-20">
 				<h1 className="text-3xl flex justify-center font-semibold">Olá 👋</h1>
 				<div className="text-3xl flex gap-2 justify-center">
