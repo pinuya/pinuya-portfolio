@@ -5,7 +5,7 @@ import { cn } from "~/lib/utils"
 const routes = [
 	{
 		title: "Inicio",
-		to: "/",
+		to: "/home",
 	},
 	{
 		title: "Sobre",
