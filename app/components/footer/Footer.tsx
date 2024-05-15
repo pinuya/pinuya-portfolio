@@ -3,18 +3,24 @@ import { Github, Linkedin, Twitter } from "lucide-react"
 
 export function Footer() {
 	return (
-		<footer className="w-full flex items-center gap-x-56 text-xs">
+		<footer className="w-full flex flex-wrap justify-center gap-36">
 			<>
-				<span className="self-center align-top w-80">© 2024, Tifany Alves</span>
+				<span className="text-muted-foreground text-xs">
+					© 2024, Tifany Alves
+				</span>
 
-				<div className="flex gap-2 ">
+				<div className="flex gap-5 text-muted-foreground">
 					<Link to={"https://github.com/pinuya"}>
-						<Github />
+						<Github className=" hover:text-primary" />
 					</Link>
-					<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
+					<Link
+						to={"https://www.linkedin.com/in/tifanyanunes/"}
+						className="hover:text-primary">
 						<Linkedin />
 					</Link>
-					<Link to={"https://twitter.com/pinuyadev"}>
+					<Link
+						to={"https://twitter.com/pinuyadev"}
+						className="hover:text-primary">
 						<Twitter />
 					</Link>
 				</div>
