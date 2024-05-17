@@ -10,8 +10,15 @@ export default function About() {
 						<p className="max-w-lg">
 							Sou desenvolvedora Full Stack, sempre busco aprimorar minhas
 							habilidades tanto em front-end quanto ao Back-end. Meu nome é
-							Tifany, tenho 23 anos, sou formada em Analise e Desenvolvimento de
-							Sistemas e estou comprometida em criar soluções eficientes e
+							Tifany, tenho 23 anos, sou formada em{" "}
+							<span className="font-semibold">
+								Analise e Desenvolvimento de Sistemas
+							</span>{" "}
+							pelo Centro Universitário Vale do Salgado. Onde adquiri uma base
+							sólida em algoritmos, estrutura de dados e programação orientada a
+							objetos. Além disso, estou sempre em busca de aprendizado
+							contínuo, seja através de cursos online, workshops ou projetos
+							pessoais. Estou comprometida em criar soluções eficientes e
 							elegantes para os desafios tecnológicos que encontro. Tenho uma
 							sólida experiência em desenvolvimento web, com mais de dois anos
 							trabalhando com projetos.
@@ -31,21 +38,24 @@ export default function About() {
 					</h1>
 				</div>
 
+				<div className="py-10 mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+					<h2 className="text-2xl font-bold tracking-tight">Skills</h2>
+				</div>
+
 				<div className="py-10">
 					<div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
 						<div className="max-w-2xl">
 							<h2 className="text-2xl font-bold tracking-tight">Educação</h2>
-							<p className="mt-6 leading-8">
-								Sou formada em{" "}
-								<span className="font-semibold">
-									Análise e Desenvolvimento de Sistemas
-								</span>{" "}
-								pelo Centro Universitário Vale do Salgado. <br />
-								Onde adquiri uma base sólida em algoritmos, estrutura de dados e
-								programação orientada a objetos. Além disso, estou sempre em
-								busca de aprendizado contínuo, seja através de cursos online,
-								workshops ou projetos pessoais.
-							</p>
+						</div>
+
+						<div className="max-w-2xl">
+							<h2 className="text-2xl font-bold tracking-tight">Experiencia</h2>
+						</div>
+
+						<div className="max-w-2xl">
+							<h2 className="text-2xl font-bold tracking-tight">
+								Certificados
+							</h2>
 						</div>
 					</div>
 				</div>
