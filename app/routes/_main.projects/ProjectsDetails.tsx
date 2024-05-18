@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react"
+import { Github, SquareArrowOutUpRight } from "lucide-react"
 
 type Items = {
 	title: string
@@ -24,19 +25,26 @@ export function ProjectsDetails(props: Props) {
 								<div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
 									<img
 										src={item.bannerImg}
-										alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+										alt="Imagem do projeto"
 										className="h-full w-full object-cover object-center"
 									/>
 								</div>
-								<h3 className="mt-6 text-sm">
+								<h3 className="mt-6 text-sm flex items-center">
 									<Link to={"/home"}>
 										<span className="absolute inset-0" />
 									</Link>
 								</h3>
-								<p className="text-base font-semibold">{item.title}</p>
-								<p className="text-base font-semibold">{item.desc}</p>
-								<Link to={"https://github.com/pinuya"}>{item.socialIcons}</Link>
+								<p className="text-lg font-semibold">{item.title}</p>
+								<p className="mt-1 text-sm">{item.desc}</p>
 							</div>
+						</div>
+						<div className="mt-2 flex flex-1 space-x-4">
+							<Link to={"https://github.com/pinuya/Personal-Website"}>
+								<Github />
+							</Link>
+							<Link to={""}>
+								<SquareArrowOutUpRight />
+							</Link>
 						</div>
 					</div>
 				))}
