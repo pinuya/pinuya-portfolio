@@ -1,3 +1,6 @@
+import { Link } from "@remix-run/react"
+import { SquareArrowOutUpRight } from "lucide-react"
+
 type Items = {
 	title: string
 	desc: string
@@ -36,6 +39,11 @@ export function AboutDetails(props: Props) {
 										))}
 									</p>
 									<p className="text-sm italic leading-6">{item.date}</p>
+								</div>
+								<div className="flex">
+									<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
+										<SquareArrowOutUpRight />
+									</Link>
 								</div>
 							</div>
 						</li>

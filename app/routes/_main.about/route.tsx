@@ -1,5 +1,6 @@
 import { SquareArrowOutUpRight } from "lucide-react"
 import { AboutDetails } from "./AboutDetails"
+import { Link } from "@remix-run/react"
 
 const educations = [
 	{
@@ -140,9 +141,6 @@ export default function About() {
 						<div className="max-w-2x">
 							<h2 className="text-2xl font-bold tracking-tight">Educação</h2>
 							<AboutDetails items={educations} />
-							<div>
-								<SquareArrowOutUpRight className="" />
-							</div>
 						</div>
 
 						<div className="max-w-2xl">
