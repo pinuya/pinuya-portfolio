@@ -40,14 +40,14 @@ const certificates = [
 
 export default function About() {
 	return (
-		<div>
+		<div className="flex flex-col items-centerjustify-center">
 			<div>
-				<div className="pt-96">
-					<div className="w-full mt-20">
+				<div className="">
+					<div className="w-full  overflow-y-auto">
 						<h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
 							Sobre
 						</h1>
-						<p className="max-w-screen-lg mt-10 tracking-tight">
+						<p className="max-w-screen-lg tracking-tight">
 							Sou desenvolvedora Full Stack, sempre busco aprimorar minhas
 							habilidades tanto em front-end quanto ao Back-end. Meu nome é
 							Tifany, tenho 23 anos, sou formada em{" "}

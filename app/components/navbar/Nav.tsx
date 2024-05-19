@@ -27,7 +27,7 @@ const routes = [
 export default function Nav() {
 	const location = useLocation()
 	return (
-		<div className="flex w-full justify-between pb-2 border-b bg-card">
+		<div className="flex w-full justify-between pb-2 border-b bg-card h-12">
 			<ModeToggle />
 
 			<div className="sm:hidden">

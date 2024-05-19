@@ -7,9 +7,7 @@ export default function PageInitial() {
 		<div>
 			<div className="flex flex-col items-center sm:items-start">
 				<h1 className="font-semibold text-4xl">Tifany Alves</h1>
-				<h2 className="font-semibold text-fuchsia-400 min-[320px]:text-sm">
-					Full Stack Developer.
-				</h2>
+				<h2 className="font-semibold">Full Stack Developer.</h2>
 				<p className="text-sm mt-2">
 					Hey, sou desenvolvedora Full Stack, amo tecnologia, <br /> desenvolver
 					sistemas e colecionar figures.
@@ -23,7 +21,7 @@ export default function PageInitial() {
 					</Button>
 				</Link>
 				<Link to={"../../public/CurriculumTifany.pdf"} target="_blank">
-					<Button>
+					<Button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
 						Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
 					</Button>
 				</Link>

@@ -7,7 +7,7 @@ export default function Main() {
 		<div className="p-6 flex flex-col h-screen w-full">
 			<Nav />
 
-			<div className="flex-1 flex items-center justify-center overflow-auto ">
+			<div className="flex-1 flex items-center justify-center">
 				<Outlet />
 			</div>
 
