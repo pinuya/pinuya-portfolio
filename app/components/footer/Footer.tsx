@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter } from "lucide-react"
 
 export function Footer() {
 	return (
-		<footer className="w-full flex flex-wrap justify-center gap-36">
+		<footer className="w-full flex flex-wrap justify-center gap-x-36">
 			<>
 				<span className="text-muted-foreground text-xs">
 					© 2024, Tifany Alves
