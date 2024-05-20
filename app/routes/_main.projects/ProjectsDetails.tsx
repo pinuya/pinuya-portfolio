@@ -38,9 +38,9 @@ export function ProjectsDetails(props: Props) {
 								<p className="mt-1 text-sm">{item.desc}</p>
 							</div>
 						</div>
-						<div className="mt-2 flex flex-1 space-x-4">
+						<div className="mt-2 flex flex-1 space-x-4 ">
 							<Link to={"https://github.com/pinuya/Personal-Website"}>
-								<Github />
+								<Github className="hover:text-secondary-foreground" />
 							</Link>
 							<Link to={""}>
 								<SquareArrowOutUpRight />

@@ -1,6 +1,4 @@
-import { SquareArrowOutUpRight } from "lucide-react"
 import { AboutDetails } from "./AboutDetails"
-import { Link } from "@remix-run/react"
 
 const educations = [
 	{
@@ -19,7 +17,7 @@ const exp = [
 		date: "2020 — 2021",
 	},
 	{
-		title: "Full Stack Developer",
+		title: "FullStack Developer",
 		desc: "Freelancer",
 		imageUrl:
 			"https://play-lh.googleusercontent.com/42jdMaq_H4ddixRCoxO5wKHc20ayOSr5MyJMPLKRSv445qD5Cb9-dCsCPt89_6uI4Prj",
@@ -44,10 +42,10 @@ export default function About() {
 			<div>
 				<div className="">
 					<div className="w-full  overflow-y-auto">
-						<h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+						<h1 className="mt-20 text-3xl font-bold tracking-tight sm:text-4xl">
 							Sobre
 						</h1>
-						<p className="max-w-screen-lg tracking-tight">
+						<p className="max-w-screen-lg tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
 							Sou desenvolvedora Full Stack, sempre busco aprimorar minhas
 							habilidades tanto em front-end quanto ao Back-end. Meu nome é
 							Tifany, tenho 23 anos, sou formada em{" "}
@@ -76,64 +74,14 @@ export default function About() {
 
 				<div className="mt-20">
 					<h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-						Experiência Profissional
+						Carreira
 					</h1>
 				</div>
 
 				<div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-					<h2 className="text-2xl font-bold tracking-tight">Skills</h2>
-					<div className="flex items-start gap-2 mt-5">
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-TypeScript-333333?style=flat&logo=typescript&logoColor=007ACC"
-							alt="TS"
-						/>
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript&logoColor=F7DF1E"
-							alt="JavaScript"
-						/>
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-Node.JS-333333?style=flat&logo=node.js&logoColor=43853D"
-							alt="Node"
-						/>
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-React-333333?style=flat&logo=react&logoColor=61DAFB"
-							alt="React"
-						/>
-
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-HTML-333333?style=flat&logo=html5&logoColor=E34F26"
-							alt="HTML"
-						/>
-
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-CSS-333333?style=flat&logo=css3&logoColor=1572B6"
-							alt="CSS"
-						/>
-
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-Tailwind_CSS-333333?style=flat&logo=tailwind-css&logoColor=38B2AC"
-							alt="TailwindCSS"
-						/>
-
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-Docker-333333?style=flat&logo=docker&logoColor=2496ED"
-							alt="Docker"
-						/>
-
-						<img
-							className="hover:opacity-75 cursor-pointer"
-							src="https://img.shields.io/badge/-Remix-333333?style=flat&logo=remix&logoColor=3274C5"
-							alt="Remix"
-						/>
-					</div>
+					<h2 className="text-2xl font-bold tracking-tight">
+						Linguagens e Tecnologias
+					</h2>
 				</div>
 
 				<div className="py-10">
@@ -144,7 +92,7 @@ export default function About() {
 						</div>
 
 						<div className="max-w-2xl">
-							<h2 className="text-2xl font-bold tracking-tight">Experiencia</h2>
+							<h2 className="text-2xl font-bold tracking-tight">Experiência</h2>
 							<AboutDetails items={exp} />
 						</div>
 					</div>
