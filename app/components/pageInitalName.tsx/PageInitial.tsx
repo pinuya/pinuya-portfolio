@@ -9,11 +9,16 @@ export default function PageInitial() {
 				<h1 className="font-semibold text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
 					Tifany Alves
 				</h1>
-				<h2 className="font-semibold">Full Stack Developer.</h2>
+				<h2 className="font-semibold">
+					FullStack Developer | Software Engineer{" "}
+					<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+						.
+					</span>
+				</h2>
 				<p className="text-sm mt-2">
-					Hey, sou desenvolvedora{" "}
-					<span className="font-semibold">FullStack</span>, amo tecnologia,{" "}
-					<br /> desenvolver sistemas e colecionar figures.
+					Olá, seja bem vindo(a)! Prazer, sou{" "}
+					<span className="font-semibold">desenvolvedora FullStack</span>,{" "}
+					<br /> fique a vontade para conhecer melhor o meu trabalho.
 				</p>
 			</div>
 			<div className="mt-6 flex justify-between">
