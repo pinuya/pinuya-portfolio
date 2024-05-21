@@ -13,12 +13,25 @@ const exp = [
 	{
 		title: "Front-End Developer",
 		desc: "Centro Universitário Vale do Salgado",
+		langs: ["HTML,", "CSS,", "TypeScript,", "React"],
 		imageUrl: "https://media.giphy.com/avatars/UniVS/FZDNJdWWlRWE.png",
 		date: "2020 — 2021",
 	},
 	{
 		title: "FullStack Developer",
 		desc: "Freelancer",
+		langs: [
+			"Javascript,",
+			"NodeJS,",
+			"TypeScript,",
+			"React,",
+			"TwailwindCSS",
+			"HTML,",
+			"CSS,",
+			"Remix,",
+			"NextJS,",
+			"Git",
+		],
 		imageUrl:
 			"https://play-lh.googleusercontent.com/42jdMaq_H4ddixRCoxO5wKHc20ayOSr5MyJMPLKRSv445qD5Cb9-dCsCPt89_6uI4Prj",
 		date: "2024 — atual",
@@ -78,11 +91,11 @@ export default function About() {
 					</h1>
 				</div>
 
-				<div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+				{/* <div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
 					<h2 className="text-2xl font-bold tracking-tight">
 						Linguagens e Tecnologias
 					</h2>
-				</div>
+				</div> */}
 
 				<div className="py-10">
 					<div className="mx-auto grid max-w-7xl gap-x-60 px-6 lg:px-8 xl:grid-cols-2">
