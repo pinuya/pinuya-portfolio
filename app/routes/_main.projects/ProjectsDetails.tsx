@@ -22,12 +22,12 @@ export function ProjectsDetails(props: Props) {
 							Projetos
 						</h2>
 
-						<motion.div
-							whileHover={{ scale: 1.2 }}
-							whileTap={{ scale: 0.8 }}
-							className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0 py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
+						<div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0 py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
 							<div className="group relative shadow-lg">
-								<div className="rounded p-px bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									whileTap={{ scale: 0.8 }}
+									className="rounded p-px bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
 									<div className="h-full w-full bg-primary-foreground px-6 py-4 ">
 										<div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
 											<img
@@ -44,9 +44,9 @@ export function ProjectsDetails(props: Props) {
 										<p className="text-lg font-semibold">{item.title}</p>
 										<p className="mt-3 text-sm">{item.desc}</p>
 									</div>
-								</div>
+								</motion.div>
 							</div>
-						</motion.div>
+						</div>
 					</div>
 				))}
 			</div>
