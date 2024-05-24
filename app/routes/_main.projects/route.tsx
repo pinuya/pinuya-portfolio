@@ -3,8 +3,8 @@ import { motion } from "framer-motion"
 
 const projects = [
 	{
-		title: "Portifolio",
-		desc: "Projeto pessoal onde eu me apresento e mostro minhas habilidades",
+		title: "Portfólio/Curriculo",
+		desc: "Projeto com layout responsivo utilizando JavaScript, TypeScript, TailwindCSS, ReactJS e Remix",
 		bannerImg: "../../../public/portfolioImg.png",
 		socialIcons: [""],
 	},
