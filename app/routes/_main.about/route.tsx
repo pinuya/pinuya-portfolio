@@ -51,21 +51,28 @@ const certificates = [
 ]
 
 export default function About() {
+	const defaultAnimation = (duration: number) => {
+		return {
+			initial: { opacity: 0 },
+			animate: { opacity: 1 },
+			transition: { duration },
+		}
+	}
+
+	const titleAnimation = defaultAnimation(1.5)
+	const descAnimation = defaultAnimation(2)
+
 	return (
 		<div className="flex flex-col items-centerjustify-center overflow-hidden">
 			<div className="">
 				<div className="w-full ">
 					<motion.h1
-						initial={{ x: "100%" }}
-						animate={{ x: 0 }}
-						transition={{ duration: 1, ease: "easeOut" }}
+						{...titleAnimation}
 						className="mt-20 text-3xl font-bold tracking-tight sm:text-4xl">
 						Sobre
 					</motion.h1>
 					<motion.p
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 1.5 }}
+						{...descAnimation}
 						className="max-w-screen-lg tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
 						Sou desenvolvedora Full Stack, sempre busco aprimorar minhas
 						habilidades tanto em front-end quanto ao Back-end. Meu nome é
@@ -92,9 +99,7 @@ export default function About() {
 
 			<div className="mt-20">
 				<motion.h1
-					initial={{ x: "100%" }}
-					animate={{ x: 0 }}
-					transition={{ duration: 1, ease: "easeOut" }}
+					{...titleAnimation}
 					className="text-3xl font-bold tracking-tight sm:text-4xl">
 					Carreira
 				</motion.h1>
@@ -108,9 +113,7 @@ export default function About() {
 
 			<div className="py-10">
 				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 1.5 }}
+					{...descAnimation}
 					className="mx-auto grid max-w-7xl gap-x-60 px-6 lg:px-8 xl:grid-cols-2">
 					<div className="max-w-2x">
 						<h2 className="text-2xl font-bold tracking-tight">Educação</h2>
