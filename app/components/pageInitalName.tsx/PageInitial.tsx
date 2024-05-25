@@ -43,7 +43,7 @@ export default function PageInitial() {
 						Saiba mais <MoveRight className="ml-2 h-4 w-4" />
 					</Button>
 				</Link>
-				<Link to={"../../public/CurriculumTifany.pdf"} target="_blank">
+				<Link to={"/CurriculumTifany.pdf"} target="_blank">
 					<Button variant="secondary">
 						Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
 					</Button>
