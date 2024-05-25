@@ -1,13 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        roboto: ["Roboto", "sans-serif"],
-      },
-    },
-  },
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -25,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
