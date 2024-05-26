@@ -15,7 +15,11 @@ type Props = {
 export function ProjectsDetails(props: Props) {
 	return (
 		<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-			<div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1.5 }}
+				className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
 				{props.items.map((item) => (
 					<div key={item.title}>
 						<h2 className="text-3xl font-bold tracking-tight sm:text-4x">
@@ -49,7 +53,7 @@ export function ProjectsDetails(props: Props) {
 						</div>
 					</div>
 				))}
-			</div>
+			</motion.div>
 		</div>
 	)
 }
