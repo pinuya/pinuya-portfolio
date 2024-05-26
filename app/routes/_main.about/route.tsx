@@ -63,7 +63,7 @@ export default function About() {
 	const descAnimation = defaultAnimation(2)
 
 	return (
-		<div className="flex flex-col items-centerjustify-center overflow-hidden">
+		<div className="flex flex-col overflow-hidden">
 			<div className="">
 				<div className="w-full ">
 					<motion.h1
