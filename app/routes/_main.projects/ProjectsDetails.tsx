@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react"
 import { motion } from "framer-motion"
+import { ScrollArea, ScrollBar } from "~/components/ui/scroll-area"
 
 type Projects = {
 	title: string
@@ -15,16 +16,12 @@ type Props = {
 export function ProjectsDetails(props: Props) {
 	return (
 		<div className=" max-w-7xl px-4 sm:px-6 lg:px-8">
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1.5 }}
-				className=" py-16 sm:py-24 xlg:max-w-none flex flex-col sm:flex-row">
+			<div className="py-16 sm:py-24 xlg:max-w-none grid grid-cols-1 sm:grid-cols-3">
 				{props.projectList.map((project) => (
 					<Link
 						to={project.linkRep}
 						key={project.title}
-						className=" lg:space-y-0 py-5 gap-x-8 gap-y-5 sm:gap-y-10 px-6 lg:px-8 flex flex-col">
+						className="lg:space-y-0 py-5 gap-x-8 gap-y-5 sm:gap-y-10 px-6 lg:px-8">
 						<motion.div
 							whileHover={{ scale: 1.2 }}
 							whileTap={{ scale: 0.8 }}
@@ -46,7 +43,7 @@ export function ProjectsDetails(props: Props) {
 						</motion.div>
 					</Link>
 				))}
-			</motion.div>
+			</div>
 		</div>
 	)
 }
