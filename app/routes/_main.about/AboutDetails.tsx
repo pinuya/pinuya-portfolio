@@ -1,5 +1,5 @@
+import { ExternalLinkIcon } from "@radix-ui/react-icons"
 import { Link } from "@remix-run/react"
-import { SquareArrowOutUpRight } from "lucide-react"
 
 type Items = {
 	title: string
@@ -44,7 +44,7 @@ export function AboutDetails(props: Props) {
 								</div>
 								<div className="flex">
 									<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
-										<SquareArrowOutUpRight />
+										<ExternalLinkIcon />
 									</Link>
 								</div>
 							</div>
