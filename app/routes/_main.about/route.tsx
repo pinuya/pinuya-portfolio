@@ -12,13 +12,6 @@ const educations = [
 
 const exp = [
 	{
-		title: "Front-End Developer",
-		desc: "Centro Universitário Vale do Salgado",
-		langs: ["HTML,", "CSS,", "TypeScript,", "React"],
-		imageUrl: "https://media.giphy.com/avatars/UniVS/FZDNJdWWlRWE.png",
-		date: "2020 — 2021",
-	},
-	{
 		title: "FullStack Developer",
 		desc: "Freelancer",
 		langs: [
@@ -37,16 +30,12 @@ const exp = [
 			"https://play-lh.googleusercontent.com/42jdMaq_H4ddixRCoxO5wKHc20ayOSr5MyJMPLKRSv445qD5Cb9-dCsCPt89_6uI4Prj",
 		date: "2024 — atual",
 	},
-]
-
-const certificates = [
 	{
-		title: "Imersao IA + Google Gemini",
-		desc: "Alura",
-		langs: ["Python,", "Gemini"],
-		imageUrl:
-			"https://yt3.googleusercontent.com/W7GokEE6ydjZFa_Tpz6yvSsDlVPTe7d4yTsJqKXy1Gbhu1BGXCfKJ_I-_TzOq37m8R9S97kQ=s900-c-k-c0x00ffffff-no-rj",
-		date: "2024",
+		title: "Front-End Developer",
+		desc: "Centro Universitário Vale do Salgado",
+		langs: ["HTML,", "CSS,", "TypeScript,", "React"],
+		imageUrl: "https://media.giphy.com/avatars/UniVS/FZDNJdWWlRWE.png",
+		date: "2020 — 2021",
 	},
 ]
 
@@ -125,11 +114,6 @@ export default function About() {
 						<AboutDetails items={exp} />
 					</div>
 				</motion.div>
-
-				<div className="max-w-2xl px-6">
-					<h2 className="text-2xl font-bold tracking-tight">Certificados</h2>
-					<AboutDetails items={certificates} />
-				</div>
 			</div>
 		</div>
 	)

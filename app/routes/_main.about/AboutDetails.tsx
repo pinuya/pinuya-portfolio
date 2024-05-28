@@ -16,7 +16,7 @@ type Props = {
 export function AboutDetails(props: Props) {
 	return (
 		<div className="py-5">
-			<div className="">
+			<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
 				<ul className="flex flex-col gap-5">
 					{props.items.map((item) => (
 						<li key={item.title}>
@@ -43,15 +43,13 @@ export function AboutDetails(props: Props) {
 									</p>
 								</div>
 								<div className="flex">
-									<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
-										<ExternalLinkIcon />
-									</Link>
+									<ExternalLinkIcon />
 								</div>
 							</div>
 						</li>
 					))}
 				</ul>
-			</div>
+			</Link>
 		</div>
 	)
 }
