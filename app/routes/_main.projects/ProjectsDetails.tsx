@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react"
 import { motion } from "framer-motion"
-import { ScrollArea, ScrollBar } from "~/components/ui/scroll-area"
 
 type Projects = {
 	title: string

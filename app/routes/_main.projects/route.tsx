@@ -1,4 +1,4 @@
-import { personalProject } from "~/assets/images"
+import { dogsProject, personalProject } from "~/assets/images"
 import { ProjectsDetails } from "./ProjectsDetails"
 import { motion } from "framer-motion"
 
@@ -8,6 +8,12 @@ const projects = [
 		desc: "Projeto com layout responsivo utilizando JavaScript, TypeScript, TailwindCSS, ReactJS e Remix",
 		bannerImg: personalProject,
 		linkRep: "https://github.com/pinuya/pinuya.dev",
+	},
+	{
+		title: "Dogs",
+		desc: "Projeto de estudos do curso Origamid. Com layout responsivo utilizando JavaScript, CSS e ReactJS.",
+		bannerImg: dogsProject,
+		linkRep: "https://github.com/pinuya/Dogs",
 	},
 ]
 
