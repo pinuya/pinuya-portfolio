@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://pinuya-dev.vercel.app/home" target="_blank">pinuya-dev</a>
+  <a href="https://pinuya.site/home" target="_blank">pinuya.site</a>
 </h2>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pinuya/pinuya.dev?style=for-the-badge)&nbsp;
@@ -9,6 +9,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/pinuya/pinuya.dev?style=for-the-badge)&nbsp;
 ![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/pinuya.dev?color=red&logo=github&style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/pinuya/pinuya.dev?style=for-the-badge)
+
+<img src="/app/assets/portfolioImg.png" alt="Header"/>
 
 ## Built With
 

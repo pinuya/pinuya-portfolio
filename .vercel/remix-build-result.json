@@ -1,0 +1,142 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "routes/action.set-theme": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_main.projects": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_main.about": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_main.home": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_index": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "app/root.tsx",
+        "config": {}
+      },
+      "routes/action.set-theme": {
+        "file": "app/routes/action.set-theme.ts",
+        "id": "routes/action.set-theme",
+        "path": "action/set-theme",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_main.projects": {
+        "file": "app/routes/_main.projects/route.tsx",
+        "id": "routes/_main.projects",
+        "path": "projects",
+        "parentId": "routes/_main",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_main.about": {
+        "file": "app/routes/_main.about/route.tsx",
+        "id": "routes/_main.about",
+        "path": "about",
+        "parentId": "routes/_main",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_main.home": {
+        "file": "app/routes/_main.home.tsx",
+        "id": "routes/_main.home",
+        "path": "home",
+        "parentId": "routes/_main",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_index": {
+        "file": "app/routes/_index.tsx",
+        "id": "routes/_index",
+        "index": true,
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_main": {
+        "file": "app/routes/_main.tsx",
+        "id": "routes/_main",
+        "parentId": "root",
+        "config": {}
+      }
+    }
+  },
+  "remixConfig": {
+    "appDirectory": "/home/tifany/projetos/personal-website/app",
+    "basename": "/",
+    "buildDirectory": "/home/tifany/projetos/personal-website/build",
+    "future": {
+      "v3_fetcherPersist": false,
+      "v3_relativeSplatPath": false,
+      "v3_throwAbortReason": false,
+      "unstable_singleFetch": false
+    },
+    "manifest": false,
+    "publicPath": "/",
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "root.tsx"
+      },
+      "routes/action.set-theme": {
+        "file": "routes/action.set-theme.ts",
+        "id": "routes/action.set-theme",
+        "path": "action/set-theme",
+        "parentId": "root"
+      },
+      "routes/_main.projects": {
+        "file": "routes/_main.projects/route.tsx",
+        "id": "routes/_main.projects",
+        "path": "projects",
+        "parentId": "routes/_main"
+      },
+      "routes/_main.about": {
+        "file": "routes/_main.about/route.tsx",
+        "id": "routes/_main.about",
+        "path": "about",
+        "parentId": "routes/_main"
+      },
+      "routes/_main.home": {
+        "file": "routes/_main.home.tsx",
+        "id": "routes/_main.home",
+        "path": "home",
+        "parentId": "routes/_main"
+      },
+      "routes/_index": {
+        "file": "routes/_index.tsx",
+        "id": "routes/_index",
+        "index": true,
+        "parentId": "root"
+      },
+      "routes/_main": {
+        "file": "routes/_main.tsx",
+        "id": "routes/_main",
+        "parentId": "root"
+      }
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
