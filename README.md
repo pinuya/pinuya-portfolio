@@ -14,7 +14,7 @@
 
 ## Built With
 
-My personal portfolio <a href="https://pinuya-dev.vercel.app/home" target="_blank">pinuya.dev</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://pinuya.site/home" target="_blank">pinuya.site</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
@@ -22,6 +22,7 @@ This project was built using these technologies.
 - Remix
 - TypeScript
 - TailwindCSS
+- Framer Motion
 - VsCode
 - Vercel
 
