@@ -1,4 +1,4 @@
-import { dogsProject, personalProject } from "~/assets/images"
+import { bikcraftProject, dogsProject, personalProject } from "~/assets/images"
 import { ProjectsDetails } from "./ProjectsDetails"
 import { motion } from "framer-motion"
 
@@ -15,12 +15,18 @@ const projects = [
 		bannerImg: dogsProject,
 		linkRep: "https://github.com/pinuya/Dogs",
 	},
+	{
+		title: "Bikcraft",
+		desc: "Projeto de estudos do curso Origamid. Codigo refatorado com TypeScript e Remix.",
+		bannerImg: bikcraftProject,
+		linkRep: "https://github.com/pinuya/Bikecraft",
+	},
 ]
 
 export default function Projects() {
 	return (
 		<motion.div
-			className="self-start"
+			className=""
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}>
