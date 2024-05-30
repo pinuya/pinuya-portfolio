@@ -7,7 +7,7 @@ import { Link } from "@remix-run/react"
 
 export function Footer() {
 	return (
-		<footer className="w-full flex flex-wrap justify-center gap-x-36">
+		<footer className="w-full flex flex-wrap justify-center gap-x-36 pb-2">
 			<span className="text-muted-foreground text-xs">
 				© 2024, Tifany Alves
 			</span>

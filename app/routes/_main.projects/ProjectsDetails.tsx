@@ -14,8 +14,8 @@ type Props = {
 
 export function ProjectsDetails(props: Props) {
 	return (
-		<div className=" max-w-7xl px-4 sm:px-6 lg:px-8">
-			<div className="py-16 sm:py-28 xlg:max-w-none grid grid-cols-1 sm:grid-cols-3">
+		<div className="max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div className="py-5 xlg:max-w-none grid grid-cols-1 sm:grid-cols-3">
 				{props.projectList.map((project) => (
 					<Link
 						to={project.linkRep}

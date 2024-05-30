@@ -52,11 +52,11 @@ export default function About() {
 	const descAnimation = defaultAnimation(2)
 
 	return (
-		<div className="flex flex-col overflow-hidden">
-			<div className="w-full ">
+		<div className="space-y-20">
+			<section>
 				<motion.h1
 					{...titleAnimation}
-					className="mt-20 text-3xl font-bold tracking-tight sm:text-4xl">
+					className="text-3xl font-bold sm:text-4xl">
 					Sobre
 				</motion.h1>
 				<motion.p
@@ -82,37 +82,36 @@ export default function About() {
 					comprometida em entregar soluções de alta qualidade, alinhadas com as
 					melhores práticas da indústria e as necessidades do cliente.
 				</motion.p>
-			</div>
-
-			<div className="mt-20">
-				<motion.h1
-					{...titleAnimation}
-					className="text-3xl font-bold tracking-tight sm:text-4xl">
-					Carreira
-				</motion.h1>
-			</div>
+			</section>
 
 			{/* <div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
 					<h2 className="text-2xl font-bold tracking-tight">
 						Linguagens e Tecnologias
 					</h2>
 				</div> */}
+			<section>
+				<motion.h1
+					{...titleAnimation}
+					className="text-3xl font-bold tracking-tight sm:text-4xl">
+					Carreira
+				</motion.h1>
 
-			<div className="py-10">
-				<motion.div
-					{...descAnimation}
-					className="mx-auto grid max-w-7xl gap-x-60 px-6 lg:px-8 xl:grid-cols-2">
-					<div className="max-w-2x">
-						<h2 className="text-2xl font-bold tracking-tight">Educação</h2>
-						<AboutDetails items={educations} />
-					</div>
+				<div className="py-10">
+					<motion.div
+						{...descAnimation}
+						className="mx-auto grid max-w-7xl gap-x-60 px-6 lg:px-8 xl:grid-cols-2">
+						<div className="max-w-2x">
+							<h2 className="text-2xl font-bold tracking-tight">Educação</h2>
+							<AboutDetails items={educations} />
+						</div>
 
-					<div className="max-w-2xl">
-						<h2 className="text-2xl font-bold tracking-tight">Experiência</h2>
-						<AboutDetails items={exp} />
-					</div>
-				</motion.div>
-			</div>
+						<div className="max-w-2xl">
+							<h2 className="text-2xl font-bold tracking-tight">Experiência</h2>
+							<AboutDetails items={exp} />
+						</div>
+					</motion.div>
+				</div>
+			</section>
 		</div>
 	)
 }

@@ -4,10 +4,10 @@ import Nav from "~/components/navbar/Nav"
 
 export default function Main() {
 	return (
-		<div className="p-6 flex flex-col h-full w-full">
+		<div className="flex flex-col min-h-screen w-full">
 			<Nav />
 
-			<div className="flex-1 flex items-center justify-center ">
+			<div className="flex flex-grow items-center justify-center p-4">
 				<Outlet />
 			</div>
 
