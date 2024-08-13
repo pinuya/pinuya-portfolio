@@ -19,7 +19,7 @@ export default function PageInitial() {
 		<div>
 			<div className="flex flex-col items-center sm:items-start">
 				<motion.div {...titleAnimation}>
-					<h1 className="font-semibold text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text ">
+					<h1 className="font-dancingScript text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text ">
 						Tifany Alves
 					</h1>
 				</motion.div>

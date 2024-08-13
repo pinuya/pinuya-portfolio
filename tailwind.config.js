@@ -20,7 +20,8 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         sans: ["Poppins", "sans-serif"],
-        body: ['"Poppins"'],
+        body: ["Poppins"],
+        dancingScript: ["Dancing Script"],
       },
       colors: {
         border: "hsl(var(--border))",
