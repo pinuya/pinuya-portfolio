@@ -34,10 +34,14 @@ export default function PageInitial() {
 					className="hover:bg-primary-foreground">
 					<TwitterLogoIcon />
 				</Link>
-				<Link to={"https://www.instagram.com/tifsnunes/"}>
+				<Link
+					to={"https://www.instagram.com/tifsnunes/"}
+					className="hover:bg-primary-foreground">
 					<InstagramLogoIcon />
 				</Link>
-				<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
+				<Link
+					to={"https://www.linkedin.com/in/tifanyanunes/"}
+					className="hover:bg-primary-foreground">
 					<LinkedInLogoIcon />
 				</Link>
 			</div>
