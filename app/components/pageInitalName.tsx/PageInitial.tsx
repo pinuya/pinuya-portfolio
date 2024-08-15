@@ -24,10 +24,14 @@ export default function PageInitial() {
 	return (
 		<div className="flex space-x-6">
 			<div className="flex flex-col space-y-6 justify-center">
-				<Link to={"https://github.com/pinuya"}>
+				<Link
+					to={"https://github.com/pinuya"}
+					className="hover:bg-primary-foreground">
 					<GitHubLogoIcon />
 				</Link>
-				<Link to={"https://x.com/tiffrieren"}>
+				<Link
+					to={"https://x.com/tiffrieren"}
+					className="hover:bg-primary-foreground">
 					<TwitterLogoIcon />
 				</Link>
 				<Link to={"https://www.instagram.com/tifsnunes/"}>
