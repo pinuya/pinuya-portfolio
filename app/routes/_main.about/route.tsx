@@ -1,5 +1,8 @@
+import { Link } from "@remix-run/react"
 import { AboutDetails } from "./AboutDetails"
 import { motion } from "framer-motion"
+import { Button } from "~/components/ui/button"
+import { FileDown } from "lucide-react"
 
 const educations = [
 	{
@@ -82,6 +85,12 @@ export default function About() {
 					comprometida em entregar soluções de alta qualidade, alinhadas com as
 					melhores práticas da indústria e as necessidades do cliente.
 				</motion.p>
+
+				<Link to={"/curriculoTifany.pdf"} target="_blank">
+					<Button variant="secondary">
+						Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
+					</Button>
+				</Link>
 			</section>
 
 			{/* <div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
