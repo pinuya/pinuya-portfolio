@@ -1,6 +1,15 @@
 import { bikcraftProject, dogsProject, personalProject } from "~/assets/images"
 import { ProjectsDetails } from "./ProjectsDetails"
 import { motion } from "framer-motion"
+import {
+	Pagination,
+	PaginationContent,
+	PaginationEllipsis,
+	PaginationItem,
+	PaginationLink,
+	PaginationNext,
+	PaginationPrevious,
+} from "@/components/ui/pagination"
 
 const projects = [
 	{
@@ -30,9 +39,26 @@ export default function Projects() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}>
-			<h2 className="text-3xl font-bold sm:text-4xl">Projetos</h2>
+			<h2 className="text-3xl font-bold sm:text-4xl">Portfolio</h2>
 
 			<ProjectsDetails projectList={projects} />
+
+			{/* <Pagination>
+				<PaginationContent>
+					<PaginationItem>
+						<PaginationPrevious href="#" />
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationLink href="#">1</PaginationLink>
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationEllipsis />
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationNext href="#" />
+					</PaginationItem>
+				</PaginationContent>
+			</Pagination> */}
 		</motion.div>
 	)
 }
