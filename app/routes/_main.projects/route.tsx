@@ -21,22 +21,25 @@ export const loader = (args: LoaderFunctionArgs) => {
 
 	const projects = [
 		{
-			title: "Portfólio/Currículo",
-			desc: "Projeto com layout responsivo utilizando JavaScript, TypeScript, TailwindCSS, ReactJS e Remix",
+			title: "Portfólio",
+			desc: "Projeto com layout responsivo utilizando JavaScript, TypeScript, TailwindCSS, ReactJS e Remix.",
 			bannerImg: personalProject,
 			linkRep: "https://github.com/pinuya/pinuya.dev",
+			linkDeploy: "https://pinyua.site",
 		},
 		{
 			title: "Dogs",
 			desc: "Projeto de estudos do curso Origamid. Com layout responsivo utilizando JavaScript, CSS e ReactJS.",
 			bannerImg: dogsProject,
 			linkRep: "https://github.com/pinuya/Dogs",
+			linkDeploy: "https://dogs-rouge.vercel.app/",
 		},
 		{
 			title: "Bikcraft",
 			desc: "Projeto de estudos do curso Origamid. Codigo refatorado com TypeScript e Remix.",
 			bannerImg: bikcraftProject,
 			linkRep: "https://github.com/pinuya/Bikecraft",
+			linkDeploy: "https://pinuya.github.io/Bicycle-Project/",
 		},
 	]
 
@@ -55,7 +58,7 @@ export default function Projects() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}>
-			<h2 className="text-3xl font-bold sm:text-4xl">Portfolio</h2>
+			<h2 className="text-3xl font-bold sm:text-4xl">Portfólio</h2>
 
 			<ProjectsDetails projectList={projects} />
 

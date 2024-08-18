@@ -48,13 +48,21 @@ export default function PageInitial() {
 						</h1>
 					</motion.div>
 
-					<motion.h2 className="font-semibold ">
+					<motion.h2
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 1.5 }}
+						className="font-semibold ">
 						Software Engineer{" "}
 						<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
 							.
 						</span>
 					</motion.h2>
-					<motion.p className="text-sm mt-2 ">
+					<motion.p
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 1.5 }}
+						className="text-sm mt-2 ">
 						Olá, seja bem vindo(a)! Prazer, sou{" "}
 						<span className="font-semibold">desenvolvedora FullStack</span>,{" "}
 						<br /> gosto de ler, programar e colecionar.

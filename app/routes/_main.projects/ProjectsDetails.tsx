@@ -6,6 +6,7 @@ type Projects = {
 	desc: string
 	bannerImg: string
 	linkRep: string
+	linkDeploy: string
 }
 
 type Props = {
@@ -17,30 +18,39 @@ export function ProjectsDetails(props: Props) {
 		<div className="max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div className="py-5 xlg:max-w-none grid grid-cols-1 sm:grid-cols-3">
 				{props.projectList.map((project) => (
-					<Link
-						to={project.linkRep}
+					<div
 						key={project.title}
 						className="lg:space-y-0 py-5 gap-x-8 gap-y-5 sm:gap-y-10 px-6 lg:px-8">
-						<motion.div
-							whileHover={{ scale: 1.2 }}
-							whileTap={{ scale: 0.8 }}
-							className="rounded p-px bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-							<div className="shadow-lg h-full w-full bg-primary-foreground px-6 py-4 ">
-								<div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-									<img
-										src={project.bannerImg}
-										alt="Imagem do projeto"
-										className="h-full w-full object-cover object-center"
-									/>
-								</div>
-
-								<p className="mt-6 flex items-center text-lg font-semibold">
+						<motion.div className="relative flex flex-col mt-6 text-primary bg-primary-foreground shadow-md bg-clip-border rounded-xl w-96">
+							<div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+								<img src={project.bannerImg} alt="card-image" />
+							</div>
+							<div className="p-6">
+								<h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
 									{project.title}
+								</h5>
+								<p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+									{project.desc}
 								</p>
-								<p className="mt-3 text-sm">{project.desc}</p>
+							</div>
+							<div className="p-6 pt-0">
+								<Link to={project.linkDeploy}>
+									<button
+										className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-primary-foreground text-primary shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+										type="button">
+										Deploy
+									</button>
+								</Link>
+								<Link to={project.linkRep}>
+									<button
+										className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-primary-foreground text-primary shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+										type="button">
+										Repositório
+									</button>
+								</Link>
 							</div>
 						</motion.div>
-					</Link>
+					</div>
 				))}
 			</div>
 		</div>
