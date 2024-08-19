@@ -7,7 +7,7 @@ import { FaXTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6"
 
 export default function PageInitial() {
 	return (
-		<div className="flex space-x-6">
+		<div className="flex space-x-12">
 			<motion.div
 				initial={{ opacity: 0, scale: 0.5 }}
 				animate={{ opacity: 1, scale: 1 }}
@@ -16,7 +16,7 @@ export default function PageInitial() {
 					delay: 1,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
-				className="flex flex-col space-y-6 justify-center">
+				className="flex flex-col  space-y-6 justify-center">
 				<Link to={"https://x.com/tiffrieren"}>
 					<FaXTwitter className="hover:fill-cyan-700" />
 				</Link>
@@ -68,7 +68,11 @@ export default function PageInitial() {
 						<br /> gosto de ler, programar e colecionar.
 					</motion.p>
 				</div>
-				<motion.div className="mt-6 flex justify-normal">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1.5 }}
+					className="mt-6 flex justify-normal">
 					<Link to={"/about"}>
 						<Button className="">
 							{" "}

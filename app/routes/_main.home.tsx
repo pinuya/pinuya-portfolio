@@ -1,4 +1,4 @@
-import { tifanyPfp } from "~/assets/images"
+import { pfpInitial } from "~/assets/images"
 import PageInitial from "~/components/pageInitalName.tsx/PageInitial"
 import { motion } from "framer-motion"
 
@@ -10,7 +10,7 @@ export default function Home() {
 				initial={{ x: "100%" }}
 				animate={{ x: 0 }}
 				transition={{ duration: 1, ease: "easeOut" }}
-				src={tifanyPfp}
+				src={pfpInitial}
 				alt="imagem"
 				className="rounded-full w-44 h-44"
 			/>
