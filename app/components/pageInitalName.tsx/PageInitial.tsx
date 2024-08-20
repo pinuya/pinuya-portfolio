@@ -43,7 +43,7 @@ export default function PageInitial() {
 							delay: 0.5,
 							ease: [0, 0.71, 0.2, 1.01],
 						}}>
-						<h1 className="pb-2 font-dancingScript text-6xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text ">
+						<h1 className="pb-2 font-dancingScript text-6xl bg-gradient-to-r from-pink-300 via-pink-400 to-pink-600 text-transparent bg-clip-text ">
 							Tifany Alves
 						</h1>
 					</motion.div>
@@ -54,7 +54,7 @@ export default function PageInitial() {
 						transition={{ duration: 1.5 }}
 						className="font-semibold ">
 						Software Engineer{" "}
-						<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+						<span className="bg-gradient-to-r from-pink-300 via-pink-400 to-pink-600 text-transparent bg-clip-text">
 							.
 						</span>
 					</motion.h2>
@@ -63,7 +63,7 @@ export default function PageInitial() {
 						animate={{ opacity: 1 }}
 						transition={{ duration: 1.5 }}
 						className="text-sm mt-2 ">
-						Olá, seja bem vindo(a)! Prazer, sou{" "}
+						Olá, seja bem vindo(a)! <br /> Prazer, sou{" "}
 						<span className="font-semibold">desenvolvedora FullStack</span>,{" "}
 						<br /> gosto de ler, programar e colecionar.
 					</motion.p>
