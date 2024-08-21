@@ -3,6 +3,7 @@ import { AboutDetails } from "./AboutDetails"
 import { motion } from "framer-motion"
 import { Button } from "~/components/ui/button"
 import { FileDown } from "lucide-react"
+import { tifanyPfp } from "~/assets/images"
 
 const educations = [
 	{
@@ -62,21 +63,32 @@ export default function About() {
 					className="text-3xl font-bold sm:text-4xl">
 					Sobre
 				</motion.h1>
-				<motion.p
-					{...descAnimation}
-					className="max-w-screen-lg tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
-					Sou desenvolvedora FullStack, sempre busco aprimorar minhas
-					habilidades tanto em front-end quanto ao Back-end. Sou formada em{" "}
-					<span className="font-semibold">
-						Analise e Desenvolvimento de Sistemas
-					</span>{" "}
-					pelo Centro Universitário Vale do Salgado. Como{" "}
-					<span className="font-semibold">desenvolvedora Fullstack</span>, estou
-					sempre em busca de novos desafios e oportunidades para expandir meu
-					conhecimento e contribuir para projetos inovadores. Estou comprometida
-					em entregar soluções de alta qualidade, alinhadas com as melhores
-					práticas da indústria e as necessidades do cliente.
-				</motion.p>
+				<div className="flex flex-col items-center justify-center gap-y-10 gap-x-28 sm:flex-row">
+					<motion.p
+						{...descAnimation}
+						className="max-w-screen-lg tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
+						Sou desenvolvedora FullStack, sempre busco aprimorar minhas
+						habilidades tanto em front-end quanto ao Back-end. Sou formada em{" "}
+						<span className="font-semibold">
+							Analise e Desenvolvimento de Sistemas
+						</span>{" "}
+						pelo Centro Universitário Vale do Salgado. Como{" "}
+						<span className="font-semibold">desenvolvedora Fullstack</span>,
+						estou sempre em busca de novos desafios e oportunidades para
+						expandir meu conhecimento e contribuir para projetos inovadores.
+						Estou comprometida em entregar soluções de alta qualidade, alinhadas
+						com as melhores práticas da indústria e as necessidades do cliente.
+					</motion.p>
+
+					<motion.img
+						src={tifanyPfp}
+						alt="imagem"
+						className="rounded-full w-44 h-44"
+						initial={{ x: "100%" }}
+						animate={{ x: 0 }}
+						transition={{ duration: 1, ease: "easeOut" }}
+					/>
+				</div>
 
 				<Link to={"/curriculoTifany.pdf"} target="_blank">
 					<Button variant="secondary">
@@ -89,6 +101,7 @@ export default function About() {
 				<h2 className="text-2xl font-bold tracking-tight">
 					Linguagens e Tecnologias
 				</h2>
+				area em desenvolvimento...
 			</div>
 			<section>
 				<motion.h1
