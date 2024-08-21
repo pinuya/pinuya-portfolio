@@ -17,7 +17,7 @@ export default function PageInitial() {
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className="flex flex-col  space-y-6 justify-center">
-				<Link to={"https://x.com/tiffrieren"}>
+				<Link to={"https://x.com/pinuyaa"}>
 					<FaXTwitter className="hover:fill-cyan-700" />
 				</Link>
 
@@ -25,7 +25,7 @@ export default function PageInitial() {
 					<FaGithub className="hover:fill-slate-600" />
 				</Link>
 
-				<Link to={"https://www.instagram.com/tifsnunes/"}>
+				<Link to={"https://www.instagram.com/imnotif/"}>
 					<FaInstagram className="hover:fill-fuchsia-700" />
 				</Link>
 				<Link to={"https://www.linkedin.com/in/tifanyanunes/"}>
