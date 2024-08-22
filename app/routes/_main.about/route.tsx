@@ -63,10 +63,10 @@ export default function About() {
 					className="text-3xl font-bold sm:text-4xl">
 					Sobre
 				</motion.h1>
-				<div className="flex flex-col items-center justify-center gap-y-10 gap-x-28 sm:flex-row">
+				<div className="flex flex-col gap-y-10 gap-x-28 sm:flex-row">
 					<motion.p
 						{...descAnimation}
-						className="max-w-screen-lg tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
+						className="max-w-3xl tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
 						Sou desenvolvedora FullStack, sempre busco aprimorar minhas
 						habilidades tanto em front-end quanto ao Back-end. Sou formada em{" "}
 						<span className="font-semibold">
@@ -89,12 +89,13 @@ export default function About() {
 						transition={{ duration: 1, ease: "easeOut" }}
 					/>
 				</div>
-
-				<Link to={"/curriculoTifany.pdf"} target="_blank">
-					<Button variant="secondary">
-						Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
-					</Button>
-				</Link>
+				<div>
+					<Link to={"/curriculoTifany.pdf"} target="_blank">
+						<Button variant="secondary">
+							Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
+						</Button>
+					</Link>
+				</div>
 			</section>
 
 			<div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
