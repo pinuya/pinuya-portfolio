@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "~/components/ui/button"
 import { FileDown } from "lucide-react"
 import { tifanyPfp } from "~/assets/images"
+import { IoShareSocialSharp } from "react-icons/io5"
 
 const educations = [
 	{
@@ -66,7 +67,7 @@ export default function About() {
 				<div className="flex flex-col gap-y-10 gap-x-28 sm:flex-row">
 					<motion.p
 						{...descAnimation}
-						className="max-w-3xl tracking-tight py-10 gap-x-8 gap-y-20 px-6 lg:px-8 ">
+						className="max-w-3xl tracking-tight px-6 py-10 gap-x-8 gap-y-20 lg:px-8 ">
 						Sou desenvolvedora FullStack, sempre busco aprimorar minhas
 						habilidades tanto em front-end quanto ao Back-end. Sou formada em{" "}
 						<span className="font-semibold">
@@ -89,10 +90,17 @@ export default function About() {
 						transition={{ duration: 1, ease: "easeOut" }}
 					/>
 				</div>
-				<div>
+				<div className="flex gap-x-8 gap-y-20 lg:px-8 ">
 					<Link to={"/curriculoTifany.pdf"} target="_blank">
 						<Button variant="secondary">
 							Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
+						</Button>
+					</Link>
+
+					<Link to={"https://linktr.ee/pinuya"}>
+						<Button variant="secondary">
+							Redes sociais
+							<IoShareSocialSharp className="ml-2 h-4 w-4" />
 						</Button>
 					</Link>
 				</div>
