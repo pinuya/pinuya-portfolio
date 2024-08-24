@@ -63,11 +63,6 @@ export default function About() {
 	return (
 		<div className="space-y-20">
 			<section className="space-y-4">
-				<motion.h1
-					{...titleAnimation}
-					className="text-3xl font-bold sm:text-4xl">
-					Sobre
-				</motion.h1>
 				<div className="flex flex-col items-center gap-x-28 sm:flex-row">
 					<motion.p
 						{...descAnimation}
@@ -110,28 +105,22 @@ export default function About() {
 				</div>
 			</section>
 
-			<div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-				<h2 className="text-2xl font-bold tracking-tight">
-					Linguagens e Tecnologias
-				</h2>
-				<div className="flex flex-col md:flex-row space-x-6">
-					<SiJavascript className="size-12" />
-					<SiTypescript className="size-12" />
-					<FaNodeJs className="size-12" />
-					<FaReact className="size-12" />
-					<RiTailwindCssFill className="size-12" />
-					<FaDocker className="size-12" />
-					<BiLogoPostgresql className="size-12" />
-					<FaGitAlt className="size-12" />
-				</div>
-			</div>
 			<section>
-				<motion.h1
-					{...titleAnimation}
-					className="text-3xl font-bold tracking-tight sm:text-4xl">
-					Carreira
-				</motion.h1>
-
+				<div className="py-10 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+					<h2 className="text-2xl font-bold tracking-tight">
+						Linguagens e Tecnologias
+					</h2>
+					<div className="flex flex-col md:flex-row space-x-6">
+						<SiJavascript className="size-12" />
+						<SiTypescript className="size-12" />
+						<FaNodeJs className="size-12" />
+						<FaReact className="size-12" />
+						<RiTailwindCssFill className="size-12" />
+						<FaDocker className="size-12" />
+						<BiLogoPostgresql className="size-12" />
+						<FaGitAlt className="size-12" />
+					</div>
+				</div>
 				<div className="py-10">
 					<motion.div
 						{...descAnimation}
