@@ -1,4 +1,9 @@
-import { bikcraftProject, dogsProject, personalProject } from "~/assets/images"
+import {
+	bikcraftProject,
+	dogsProject,
+	listifyProject,
+	personalProject,
+} from "~/assets/images"
 import { ProjectsDetails } from "./ProjectsDetails"
 import { motion } from "framer-motion"
 import {
@@ -22,10 +27,25 @@ export const loader = (args: LoaderFunctionArgs) => {
 	const projects = [
 		{
 			title: "Portfólio",
-			desc: "Projeto com layout responsivo utilizando JavaScript, TypeScript, TailwindCSS, ReactJS e Remix.",
+			desc: "Projeto pessoal para uso a fim de mostrar o que eu sei, com layout responsivo utilizando JavaScript, TypeScript, TailwindCSS, ReactJS e Remix.",
 			bannerImg: personalProject,
 			linkRep: "https://github.com/pinuya/pinuya.dev",
 			linkDeploy: "https://pinyua.site",
+		},
+		{
+			title: "Listify",
+			desc: "Listify é o seu companheiro digital para organização pessoal e produtividade. Projeto desenvolvido com TypeScript e Remix",
+			bannerImg: listifyProject,
+			linkRep: "https://github.com/pinuya/Listify",
+			linkDeploy: "",
+		},
+
+		{
+			title: "Bikcraft",
+			desc: "Projeto de estudos do curso Origamid. Site de compra e venda de bicicletas. Codigo refatorado com TypeScript e Remix.",
+			bannerImg: bikcraftProject,
+			linkRep: "https://github.com/pinuya/Bikecraft",
+			linkDeploy: "https://pinuya.github.io/Bicycle-Project/",
 		},
 		{
 			title: "Dogs",
@@ -33,13 +53,6 @@ export const loader = (args: LoaderFunctionArgs) => {
 			bannerImg: dogsProject,
 			linkRep: "https://github.com/pinuya/Dogs",
 			linkDeploy: "https://dogs-rouge.vercel.app/",
-		},
-		{
-			title: "Bikcraft",
-			desc: "Projeto de estudos do curso Origamid. Codigo refatorado com TypeScript e Remix.",
-			bannerImg: bikcraftProject,
-			linkRep: "https://github.com/pinuya/Bikecraft",
-			linkDeploy: "https://pinuya.github.io/Bicycle-Project/",
 		},
 	]
 

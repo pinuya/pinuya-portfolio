@@ -3,5 +3,13 @@ import pfpInitial from "./pfpInitial.jpg"
 import personalProject from "./portfolioImg.png"
 import dogsProject from "./dogsProject.png"
 import bikcraftProject from "./bikcraft.png"
+import listifyProject from "./listifyProject.png"
 
-export { tifanyPfp, personalProject, dogsProject, bikcraftProject, pfpInitial }
+export {
+	tifanyPfp,
+	personalProject,
+	dogsProject,
+	bikcraftProject,
+	pfpInitial,
+	listifyProject,
+}
