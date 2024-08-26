@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react"
 import { Button } from "../ui/button"
-import { MoveRight } from "lucide-react"
+import { BriefcaseBusiness, MoveRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { FaXTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6"
@@ -16,7 +16,7 @@ export default function PageInitial() {
 					delay: 1,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
-				className="flex flex-col  space-y-6 justify-center">
+				className="hidden sm:flex sm:flex-col sm:space-y-6 sm:justify-center">
 				<Link to={"https://x.com/pinuyaa"}>
 					<FaXTwitter className="hover:fill-cyan-700" />
 				</Link>
@@ -65,18 +65,25 @@ export default function PageInitial() {
 						className="text-sm mt-2 ">
 						Olá, seja bem vindo(a)! <br /> Prazer, sou{" "}
 						<span className="font-semibold">desenvolvedora FullStack</span>,{" "}
-						<br /> gosto de ler, programar e colecionar.
+						gosto de ler, programar e colecionar.
 					</motion.p>
 				</div>
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1.5 }}
-					className="mt-6 flex justify-normal">
+					className="mt-6 flex justify-normal space-x-4">
 					<Link to={"/about"}>
-						<Button className="">
+						<Button variant={"outline"}>
 							{" "}
 							Saiba mais <MoveRight className="ml-2 h-4 w-4" />
+						</Button>
+					</Link>
+
+					<Link to={"/projects"}>
+						<Button variant={"outline"}>
+							{" "}
+							Ver projetos <BriefcaseBusiness className="ml-2 h-4 w-4" />
 						</Button>
 					</Link>
 				</motion.div>

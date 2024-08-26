@@ -57,12 +57,12 @@ export default function About() {
 		}
 	}
 
-	const titleAnimation = defaultAnimation(1.5)
 	const descAnimation = defaultAnimation(2)
 
 	return (
 		<div className="space-y-20">
 			<section className="space-y-4">
+				<h2 className="text-2xl font-bold tracking-tight">Sobre</h2>
 				<div className="flex flex-col items-center gap-x-28 sm:flex-row">
 					<motion.p
 						{...descAnimation}
@@ -89,20 +89,15 @@ export default function About() {
 						transition={{ duration: 1, ease: "easeOut" }}
 					/>
 				</div>
-				<div className="flex gap-x-8 lg:px-8 ">
+				<motion.div
+					{...descAnimation}
+					className="flex justify-start gap-x-8 lg:px-8 ">
 					<Link to={"/curriculoTifany.pdf"} target="_blank">
-						<Button variant="secondary">
+						<Button variant="outline">
 							Baixar Curriculo <FileDown className="ml-2 h-4 w-4" />
 						</Button>
 					</Link>
-
-					<Link to={"https://linktr.ee/pinuya"}>
-						<Button variant="secondary">
-							Redes sociais
-							<IoShareSocialSharp className="ml-2 h-4 w-4" />
-						</Button>
-					</Link>
-				</div>
+				</motion.div>
 			</section>
 
 			<section>
@@ -110,7 +105,7 @@ export default function About() {
 					<h2 className="text-2xl font-bold tracking-tight">
 						Linguagens e Tecnologias
 					</h2>
-					<div className="flex flex-col md:flex-row space-x-6">
+					{/* <div className="flex flex-col md:flex-row space-x-6">
 						<SiJavascript className="size-12" />
 						<SiTypescript className="size-12" />
 						<FaNodeJs className="size-12" />
@@ -119,17 +114,12 @@ export default function About() {
 						<FaDocker className="size-12" />
 						<BiLogoPostgresql className="size-12" />
 						<FaGitAlt className="size-12" />
-					</div>
+					</div> */}
 				</div>
 				<div className="py-10">
 					<motion.div
 						{...descAnimation}
-						className="mx-auto grid max-w-7xl gap-x-60 px-6 lg:px-8 xl:grid-cols-2">
-						<div className="max-w-2x">
-							<h2 className="text-2xl font-bold tracking-tight">Educação</h2>
-							<AboutDetails items={educations} />
-						</div>
-
+						className="mx-auto max-w-7xl gap-x-60 px-6 lg:px-8 ">
 						<div className="max-w-2xl">
 							<h2 className="text-2xl font-bold tracking-tight">Experiência</h2>
 							<AboutDetails items={exp} />

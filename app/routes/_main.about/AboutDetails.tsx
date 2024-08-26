@@ -1,4 +1,3 @@
-import { ExternalLinkIcon } from "@radix-ui/react-icons"
 import { Link } from "@remix-run/react"
 
 type Items = {
@@ -11,6 +10,10 @@ type Items = {
 
 type Props = {
 	items: Items[]
+}
+
+type Langs = {
+	name: string
 }
 
 export function AboutDetails(props: Props) {
@@ -41,9 +44,6 @@ export function AboutDetails(props: Props) {
 									<p className="text-sm italic leading-6 cursor-pointer">
 										{item.date}
 									</p>
-								</div>
-								<div className="flex">
-									<ExternalLinkIcon />
 								</div>
 							</div>
 						</li>
