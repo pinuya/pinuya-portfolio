@@ -1,9 +1,16 @@
 import { Link } from "@remix-run/react"
 import { FileDownIcon } from "lucide-react"
-import { initialSawako, tifanyPfp } from "~/assets/images"
+import {
+	initialSawako,
+	listifyProject,
+	personalProject,
+	projectX,
+	tifanyPfp,
+} from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion } from "framer-motion"
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
+import { Card, CardHeader, CardContent } from "~/components/ui/card"
 
 export default function Main() {
 	const defaultAnimation = (duration: number) => {
@@ -31,17 +38,17 @@ export default function Main() {
 							Home
 						</Link>
 						<Link
-							to={""}
+							to={"#about"}
 							className="text-sm font-medium hover:underline underline-offset-4">
 							Sobre
 						</Link>
 						<Link
-							to={""}
+							to={"#skills"}
 							className="text-sm font-medium hover:underline underline-offset-4">
 							Skills
 						</Link>
 						<Link
-							to={""}
+							to={"#projects"}
 							className="text-sm font-medium hover:underline underline-offset-4">
 							Projetos
 						</Link>
@@ -152,6 +159,76 @@ export default function Main() {
 										<FaInstagram className="hover:fill-fuchsia-700 w-6 h-6" />
 									</Link>
 								</div> */}
+							</div>
+						</div>
+					</section>
+
+					<section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+						<div className="container grid gap-6 px-4 md:px-6">
+							<div className="space-y-4 text-center">
+								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+									Projetos
+								</h2>
+								<p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
+									Confira alguns dos aplicativos web que desenvolvi para meus
+									clientes e projetos pessoais.
+								</p>
+							</div>
+							<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+								<Card>
+									<CardHeader>
+										<img
+											src={personalProject}
+											width={400}
+											height={300}
+											alt="Project 1"
+											className="aspect-video overflow-hidden rounded-t-lg object-cover"
+										/>
+									</CardHeader>
+									<CardContent className="space-y-2">
+										<h3 className="text-xl font-medium">Portfólio</h3>
+										<p className="text-muted-foreground">
+											Uma aplicação web de uso pessoal, onde apresento a vocês
+											quem eu sou. Utilizei Remix e TailwindCSS.
+										</p>
+									</CardContent>
+								</Card>
+								<Card>
+									<CardHeader>
+										<img
+											src={listifyProject}
+											width={400}
+											height={300}
+											alt="Project 2"
+											className="aspect-video overflow-hidden rounded-t-lg object-cover"
+										/>
+									</CardHeader>
+									<CardContent className="space-y-2">
+										<h3 className="text-xl font-medium">Listify</h3>
+										<p className="text-muted-foreground">
+											Com Listify, você pode criar e gerenciar listas para uma
+											variedade de necessidades. Ainda em desenvolvimento...
+										</p>
+									</CardContent>
+								</Card>
+								<Card>
+									<CardHeader>
+										<img
+											src={projectX}
+											width={400}
+											height={300}
+											alt="Project 3"
+											className="aspect-video overflow-hidden rounded-t-lg object-cover"
+										/>
+									</CardHeader>
+									<CardContent className="space-y-2">
+										<h3 className="text-xl font-medium">Projeto Secreto</h3>
+										<p className="text-muted-foreground">
+											Ainda em processo de desenvolvimento. Após a finalização e
+											a aprovação do cliente, divulgarei aqui.
+										</p>
+									</CardContent>
+								</Card>
 							</div>
 						</div>
 					</section>
