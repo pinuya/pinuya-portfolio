@@ -4,9 +4,7 @@ import {
 	FigmaIcon,
 	FileDownIcon,
 	GitFork,
-	GitlabIcon,
 	LinkedinIcon,
-	TwitterIcon,
 } from "lucide-react"
 import {
 	initialSawako,
@@ -16,8 +14,8 @@ import {
 	tifanyPfp,
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
-import { motion } from "framer-motion"
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
+import { motion, useScroll } from "framer-motion"
+import { FaGithub, FaXTwitter } from "react-icons/fa6"
 import { Card, CardHeader, CardContent } from "~/components/ui/card"
 import { DiJavascript, DiNodejs } from "react-icons/di"
 import { FaCss3, FaReact } from "react-icons/fa"
@@ -34,6 +32,7 @@ export const meta: MetaFunction = () => {
 }
 
 export default function Main() {
+	const { scrollYProgress } = useScroll()
 	const defaultAnimation = (duration: number) => {
 		return {
 			initial: { opacity: 0 },
@@ -46,6 +45,10 @@ export default function Main() {
 
 	return (
 		<div className="flex flex-col min-h-screen w-full">
+			<motion.div
+				className="progress-bar"
+				style={{ scaleX: scrollYProgress }}
+			/>
 			<div className="flex flex-col min-h-[100dvh]">
 				<header className="px-4 lg:px-6 h-14 flex items-center">
 					<Link to={""} className="flex items-center justify-center">

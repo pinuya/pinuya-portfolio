@@ -60,4 +60,13 @@
   html {
     scroll-behavior: smooth;
   }
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: pink;
+    transform-origin: 0%;
+  }
 }
