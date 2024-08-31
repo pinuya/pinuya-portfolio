@@ -15,11 +15,13 @@ import {
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll } from "framer-motion"
-import { FaGithub, FaXTwitter } from "react-icons/fa6"
+import { FaGithub, FaNodeJs, FaXTwitter } from "react-icons/fa6"
 import { Card, CardHeader, CardContent } from "~/components/ui/card"
-import { DiJavascript, DiNodejs } from "react-icons/di"
-import { FaCss3, FaReact } from "react-icons/fa"
-import { redirect, type MetaFunction } from "@remix-run/node"
+import { DiJavascript } from "react-icons/di"
+import { FaDocker, FaReact } from "react-icons/fa"
+import { RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
+import { SiExpress, SiPostgresql, SiTypescript } from "react-icons/si"
+import type { MetaFunction } from "@remix-run/node"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -193,6 +195,14 @@ export default function Main() {
 								</div>
 								<div className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
+										<SiTypescript className="w-6 h-6 text-primary" />
+									</div>
+									<span className="text-sm font-medium text-muted-foreground">
+										TypeScript
+									</span>
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<div className="bg-muted rounded-full p-3">
 										<FaReact className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
@@ -201,18 +211,59 @@ export default function Main() {
 								</div>
 								<div className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
-										<FaCss3 className="w-6 h-6 text-primary" />
+										<FaNodeJs className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
-										CSS
+										Node.js
+									</span>
+								</div>
+
+								<div className="flex flex-col items-center gap-2">
+									<div className="bg-muted rounded-full p-3">
+										<FaDocker className="w-6 h-6 text-primary" />
+									</div>
+									<span className="text-sm font-medium text-muted-foreground">
+										Docker
 									</span>
 								</div>
 								<div className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
-										<DiNodejs className="w-6 h-6 text-primary" />
+										<SiPostgresql className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
-										Node.js
+										Postgress
+									</span>
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<div className="bg-muted rounded-full p-3">
+										<RiTailwindCssFill className="w-6 h-6 text-primary" />
+									</div>
+									<span className="text-sm font-medium text-muted-foreground">
+										TailwindCSS
+									</span>
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<div className="bg-muted rounded-full p-3">
+										<RiRemixRunFill className="w-6 h-6 text-primary" />
+									</div>
+									<span className="text-sm font-medium text-muted-foreground">
+										Remix
+									</span>
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<div className="bg-muted rounded-full p-3">
+										<SiExpress className="w-6 h-6 text-primary" />
+									</div>
+									<span className="text-sm font-medium text-muted-foreground">
+										Express
+									</span>
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<div className="bg-muted rounded-full p-3">
+										<RiNextjsFill className="w-6 h-6 text-primary" />
+									</div>
+									<span className="text-sm font-medium text-muted-foreground">
+										Next.js
 									</span>
 								</div>
 								<div className="flex flex-col items-center gap-2">
