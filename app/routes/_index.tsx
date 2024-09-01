@@ -185,103 +185,125 @@ export default function Main() {
 								</p>
 							</div>
 							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-								<div className="flex flex-col items-center gap-2">
+								<motion.div className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<DiJavascript className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										JavaScript
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<SiTypescript className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										TypeScript
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<FaReact className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										React
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<FaNodeJs className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Node.js
 									</span>
-								</div>
+								</motion.div>
 
-								<div className="flex flex-col items-center gap-2">
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<FaDocker className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Docker
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<SiPostgresql className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Postgress
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<RiTailwindCssFill className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										TailwindCSS
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<RiRemixRunFill className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Remix
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<SiExpress className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Express
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<RiNextjsFill className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Next.js
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<GitFork className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Git
 									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<FigmaIcon className="w-6 h-6 text-primary" />
 									</div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Figma
 									</span>
-								</div>
+								</motion.div>
 							</div>
 						</div>
 					</section>
@@ -298,60 +320,75 @@ export default function Main() {
 								</p>
 							</div>
 							<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-								<Card>
-									<CardHeader>
-										<img
-											src={personalProject}
-											width={400}
-											height={300}
-											alt="Project 1"
-											className="aspect-video overflow-hidden rounded-t-lg object-cover"
-										/>
-									</CardHeader>
-									<CardContent className="space-y-2">
-										<h3 className="text-xl font-medium">Portfólio</h3>
-										<p className="text-muted-foreground">
-											Uma aplicação web de uso pessoal, onde apresento a vocês
-											quem eu sou. Utilizei Remix e TailwindCSS.
-										</p>
-									</CardContent>
-								</Card>
-								<Card>
-									<CardHeader>
-										<img
-											src={listifyProject}
-											width={400}
-											height={300}
-											alt="Project 2"
-											className="aspect-video overflow-hidden rounded-t-lg object-cover"
-										/>
-									</CardHeader>
-									<CardContent className="space-y-2">
-										<h3 className="text-xl font-medium">Listify</h3>
-										<p className="text-muted-foreground">
-											Com Listify, você pode criar e gerenciar listas para uma
-											variedade de necessidades. Ainda em desenvolvimento...
-										</p>
-									</CardContent>
-								</Card>
-								<Card>
-									<CardHeader>
-										<img
-											src={projectX}
-											width={400}
-											height={300}
-											alt="Project 3"
-											className="aspect-video overflow-hidden rounded-t-lg object-cover"
-										/>
-									</CardHeader>
-									<CardContent className="space-y-2">
-										<h3 className="text-xl font-medium">Projeto Secreto</h3>
-										<p className="text-muted-foreground">
-											Ainda em processo de desenvolvimento. Após a finalização e
-											a aprovação do cliente, divulgarei aqui.
-										</p>
-									</CardContent>
-								</Card>
+								<motion.div whileHover={{ scale: 1.2 }}>
+									<Link to={"https://github.com/pinuya/pinuya-portfolio"}>
+										<Card>
+											<CardHeader>
+												<img
+													src={personalProject}
+													width={400}
+													height={300}
+													alt="Project 1"
+													className="aspect-video overflow-hidden rounded-t-lg object-cover"
+												/>
+											</CardHeader>
+											<CardContent className="space-y-2">
+												<h3 className="text-xl font-medium">Portfólio</h3>
+												<p className="text-muted-foreground">
+													Uma aplicação web de uso pessoal, onde apresento a
+													vocês quem eu sou. Utilizei Remix e TailwindCSS.
+												</p>
+											</CardContent>
+										</Card>
+									</Link>
+								</motion.div>
+
+								<motion.div whileHover={{ scale: 1.2 }}>
+									<Link to={"https://github.com/pinuya/listify-app"}>
+										<Card>
+											<CardHeader>
+												<img
+													src={listifyProject}
+													width={400}
+													height={300}
+													alt="Project 2"
+													className="aspect-video overflow-hidden rounded-t-lg object-cover"
+												/>
+											</CardHeader>
+											<CardContent className="space-y-2">
+												<h3 className="text-xl font-medium">Listify</h3>
+												<p className="text-muted-foreground">
+													Com Listify, você pode criar e gerenciar listas para
+													uma variedade de necessidades. Ainda em
+													desenvolvimento...
+												</p>
+											</CardContent>
+										</Card>
+									</Link>
+								</motion.div>
+
+								<motion.div whileHover={{ scale: 1.2 }}>
+									<Link to={""}>
+										<Card>
+											<CardHeader>
+												<img
+													src={projectX}
+													width={400}
+													height={300}
+													alt="Project 3"
+													className="aspect-video overflow-hidden rounded-t-lg object-cover"
+												/>
+											</CardHeader>
+											<CardContent className="space-y-2">
+												<h3 className="text-xl font-medium">Projeto Secreto</h3>
+												<p className="text-muted-foreground">
+													Ainda em processo de desenvolvimento. Após a
+													finalização e a aprovação do cliente, divulgarei aqui.
+												</p>
+											</CardContent>
+										</Card>
+									</Link>
+								</motion.div>
 							</div>
 						</div>
 					</section>
