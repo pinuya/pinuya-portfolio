@@ -44,6 +44,7 @@ export default function Main() {
 	}
 
 	const textAnimation = defaultAnimation(2)
+	const buttonAnimation = defaultAnimation(4)
 
 	return (
 		<div className="flex flex-col min-h-screen w-full">
@@ -99,7 +100,9 @@ export default function Main() {
 											fáceis de usar.
 										</p>
 									</motion.div>
-									<div className="flex flex-col gap-2 min-[400px]:flex-row">
+									<motion.div
+										{...buttonAnimation}
+										className="flex flex-col gap-2 min-[400px]:flex-row">
 										<Link
 											to={"#projects"}
 											className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
@@ -111,9 +114,12 @@ export default function Main() {
 											className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
 											Baixar curriculo <FileDownIcon className="ml-2 h-4 w-4" />
 										</Link>
-									</div>
+									</motion.div>
 								</div>
-								<img
+								<motion.img
+									initial={{ x: "100%" }}
+									animate={{ x: 0 }}
+									transition={{ duration: 1, ease: "easeOut" }}
 									src={initialSawako}
 									width="550"
 									height="550"
