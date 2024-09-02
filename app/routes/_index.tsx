@@ -4,6 +4,7 @@ import {
 	FigmaIcon,
 	FileDownIcon,
 	GitFork,
+	InstagramIcon,
 	LinkedinIcon,
 } from "lucide-react"
 import {
@@ -15,7 +16,7 @@ import {
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll } from "framer-motion"
-import { FaGithub, FaNodeJs, FaXTwitter } from "react-icons/fa6"
+import { FaBluesky, FaGithub, FaNodeJs, FaXTwitter } from "react-icons/fa6"
 import { Card, CardHeader, CardContent } from "~/components/ui/card"
 import { DiJavascript } from "react-icons/di"
 import { FaDocker, FaReact } from "react-icons/fa"
@@ -138,7 +139,7 @@ export default function Main() {
 								<motion.img
 									src={tifanyPfp}
 									alt="Tifany"
-									className="h-48 w-48 rounded-full"
+									className="h-48 w-48 rounded-lg"
 									initial={{ x: "100%" }}
 									animate={{ x: 0 }}
 									transition={{ duration: 1, ease: "easeOut" }}
@@ -191,7 +192,9 @@ export default function Main() {
 								</p>
 							</div>
 							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-								<motion.div className="flex flex-col items-center gap-2">
+								<motion.div
+									whileHover={{ scale: 1.2 }}
+									className="flex flex-col items-center gap-2">
 									<div className="bg-muted rounded-full p-3">
 										<DiJavascript className="w-6 h-6 text-primary" />
 									</div>
@@ -407,21 +410,21 @@ export default function Main() {
 						</div>
 						<div className="flex items-center space-x-4">
 							<Link
-								to={"https://x.com/pinuyaa"}
+								to={"https://bsky.app/profile/pinuya.bsky.social"}
 								className="text-muted-foreground hover:text-foreground">
-								<FaXTwitter className="h-5 w-5" />
+								<FaBluesky className="h-5 w-5" />
 								<span className="sr-only">X</span>
 							</Link>
 							<Link
 								to={"https://www.linkedin.com/in/tifanyanunes/"}
 								className="text-muted-foreground hover:text-foreground">
-								<FacebookIcon className="h-5 w-5" />
+								<LinkedinIcon className="h-5 w-5" />
 								<span className="sr-only">LinkedIn</span>
 							</Link>
 							<Link
 								to={"https://www.instagram.com/imnotif/"}
 								className="text-muted-foreground hover:text-foreground">
-								<LinkedinIcon className="h-5 w-5" />
+								<InstagramIcon className="h-5 w-5" />
 								<span className="sr-only">Instagram</span>
 							</Link>
 							<Link
