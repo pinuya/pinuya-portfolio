@@ -145,7 +145,7 @@ export default function Main() {
 									transition={{ duration: 1, ease: "easeOut" }}
 								/>
 							</div>
-							<div className="space-y-4">
+							<motion.div {...textAnimation} className="space-y-4">
 								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Sobre Mim
 								</h2>
@@ -175,7 +175,7 @@ export default function Main() {
 										</ul>
 									</div>
 								</div>
-							</div>
+							</motion.div>
 						</div>
 					</section>
 
@@ -183,14 +183,14 @@ export default function Main() {
 						id="skills"
 						className="container mx-auto py-12 md:py-16 lg:py-20">
 						<div className="space-y-6 md:space-y-8 lg:space-y-10">
-							<div className="space-y-4 text-center">
+							<motion.div {...textAnimation} className="space-y-4 text-center">
 								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Skills
 								</h2>
 								<p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
 									Confira as linguagens e frameworks que eu domino
 								</p>
-							</div>
+							</motion.div>
 							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
 								<motion.div
 									whileHover={{ scale: 1.2 }}
@@ -319,7 +319,7 @@ export default function Main() {
 
 					<section id="projects" className="w-full py-12 md:py-24 lg:py-32">
 						<div className="container grid gap-6 px-4 md:px-6">
-							<div className="space-y-4 text-center">
+							<motion.div {...textAnimation} className="space-y-4 text-center">
 								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Projetos
 								</h2>
@@ -327,7 +327,7 @@ export default function Main() {
 									Confira alguns dos aplicativos web que desenvolvi para meus
 									clientes e projetos pessoais.
 								</p>
-							</div>
+							</motion.div>
 							<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 								<motion.div whileHover={{ scale: 1.2 }}>
 									<Link to={"https://github.com/pinuya/pinuya-portfolio"}>
