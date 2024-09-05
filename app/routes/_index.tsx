@@ -192,127 +192,127 @@ export default function Main() {
 								</p>
 							</motion.div>
 							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<DiJavascript className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										JavaScript
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<SiTypescript className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										TypeScript
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<FaReact className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										React
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<FaNodeJs className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Node.js
 									</span>
-								</motion.div>
+								</div>
 
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<FaDocker className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Docker
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<SiPostgresql className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Postgress
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<RiTailwindCssFill className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										TailwindCSS
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<RiRemixRunFill className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Remix
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<SiExpress className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Express
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<RiNextjsFill className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Next.js
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<GitFork className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Git
 									</span>
-								</motion.div>
-								<motion.div
-									whileHover={{ scale: 1.2 }}
-									className="flex flex-col items-center gap-2">
-									<div className="bg-muted rounded-full p-3">
+								</div>
+								<div className="flex flex-col items-center gap-2">
+									<motion.div
+										whileHover={{ scale: 1.2 }}
+										className="bg-muted rounded-full p-3">
 										<FigmaIcon className="w-6 h-6 text-primary" />
-									</div>
+									</motion.div>
 									<span className="text-sm font-medium text-muted-foreground">
 										Figma
 									</span>
-								</motion.div>
+								</div>
 							</div>
 						</div>
 					</section>
