@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react"
 import {
-	FacebookIcon,
 	FigmaIcon,
 	FileDownIcon,
 	GitFork,
@@ -8,15 +7,15 @@ import {
 	LinkedinIcon,
 } from "lucide-react"
 import {
-	initialSawako,
+	initialImage,
 	listifyProject,
 	personalProject,
 	projectX,
 	tifanyPfp,
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
-import { motion, useScroll } from "framer-motion"
-import { FaBluesky, FaGithub, FaNodeJs, FaXTwitter } from "react-icons/fa6"
+import { motion, useScroll, type Variants } from "framer-motion"
+import { FaBluesky, FaGithub, FaNodeJs } from "react-icons/fa6"
 import { Card, CardHeader, CardContent } from "~/components/ui/card"
 import { DiJavascript } from "react-icons/di"
 import { FaDocker, FaReact } from "react-icons/fa"
@@ -32,6 +31,20 @@ export const meta: MetaFunction = () => {
 			content: "Portfolio",
 		},
 	]
+}
+
+const cardVariants: Variants = {
+	offscreen: {
+		y: 300,
+	},
+	onscreen: {
+		y: 0,
+		transition: {
+			type: "spring",
+			bounce: 0.4,
+			duration: 0.8,
+		},
+	},
 }
 
 export default function Main() {
@@ -118,10 +131,8 @@ export default function Main() {
 									</motion.div>
 								</div>
 								<motion.img
-									initial={{ x: "100%" }}
-									animate={{ x: 0 }}
-									transition={{ duration: 1, ease: "easeOut" }}
-									src={initialSawako}
+									{...buttonAnimation}
+									src={initialImage}
 									width="550"
 									height="550"
 									alt="Hero"
@@ -140,15 +151,18 @@ export default function Main() {
 									src={tifanyPfp}
 									alt="Tifany"
 									className="h-48 w-48 rounded-lg"
-									initial={{ x: "100%" }}
-									animate={{ x: 0 }}
-									transition={{ duration: 1, ease: "easeOut" }}
 								/>
 							</div>
-							<motion.div {...textAnimation} className="space-y-4">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+							<motion.div
+								initial="offscreen"
+								whileInView="onscreen"
+								viewport={{ once: true, amount: 0.8 }}
+								className="space-y-4">
+								<motion.h2
+									variants={cardVariants}
+									className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Sobre Mim
-								</h2>
+								</motion.h2>
 								<p className="max-w-[600px] text-muted-foreground md:text-xl">
 									Sou uma desenvolvedora full-stack com mais de 2 anos de
 									experiência na construção de aplicações web. Sou especialista
@@ -183,10 +197,16 @@ export default function Main() {
 						id="skills"
 						className="container mx-auto py-12 md:py-16 lg:py-20">
 						<div className="space-y-6 md:space-y-8 lg:space-y-10">
-							<motion.div {...textAnimation} className="space-y-4 text-center">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+							<motion.div
+								initial="offscreen"
+								whileInView="onscreen"
+								viewport={{ once: true, amount: 0.8 }}
+								className="space-y-4 text-center">
+								<motion.h2
+									variants={cardVariants}
+									className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Skills
-								</h2>
+								</motion.h2>
 								<p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
 									Confira as linguagens e frameworks que eu domino
 								</p>
@@ -319,10 +339,16 @@ export default function Main() {
 
 					<section id="projects" className="w-full py-12 md:py-24 lg:py-32">
 						<div className="container grid gap-6 px-4 md:px-6">
-							<motion.div {...textAnimation} className="space-y-4 text-center">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+							<motion.div
+								initial="offscreen"
+								whileInView="onscreen"
+								viewport={{ once: true, amount: 0.8 }}
+								className="space-y-4 text-center">
+								<motion.h2
+									variants={cardVariants}
+									className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Projetos
-								</h2>
+								</motion.h2>
 								<p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
 									Confira alguns dos aplicativos web que desenvolvi para meus
 									clientes e projetos pessoais.

@@ -4,7 +4,7 @@ import personalProject from "./portfolioImg.png"
 import dogsProject from "./dogsProject.png"
 import bikcraftProject from "./bikcraft.png"
 import listifyProject from "./listifyProject.png"
-import initialSawako from "./initialSawako.jpg"
+import initialImage from "./initialImage.jpg"
 import projectX from "./projectX.jpg"
 
 export {
@@ -14,6 +14,6 @@ export {
 	bikcraftProject,
 	pfpInitial,
 	listifyProject,
-	initialSawako,
+	initialImage,
 	projectX,
 }
