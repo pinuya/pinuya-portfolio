@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react"
 import {
+	CalendarIcon,
 	FigmaIcon,
 	FileDownIcon,
 	GitFork,
@@ -46,6 +47,34 @@ const cardVariants: Variants = {
 		},
 	},
 }
+
+interface Experience {
+	company: string
+	position: string
+	duration: string
+	description: string[]
+}
+
+const experiences: Experience[] = [
+	{
+		company: "Autônomo",
+		position: "Software Engineer",
+		duration: "Jan 2022 - Present",
+		description: [
+			"Implementa novos recursos usando React e TypeScript, melhorando o envolvimento do usuário em 30%.",
+			"Desenvolve sites otimizados, responsivos e com design em alta no mercado.",
+		],
+	},
+	{
+		company: "UniVS - Centro Universitário Vale do Salgado",
+		position: "Frontend Developer",
+		duration: "Jan 2019 - Jan 2020",
+		description: [
+			"Desenvolveu sites utilizando React e NextJs.",
+			"Colaborou com designers UX para implementar designs responsivos.",
+		],
+	},
+]
 
 export default function Main() {
 	const { scrollYProgress } = useScroll()
@@ -142,9 +171,7 @@ export default function Main() {
 						</div>
 					</section>
 
-					<section
-						id="about"
-						className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+					<section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
 						<div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:items-center">
 							<div className="flex justify-center">
 								<motion.img
@@ -169,27 +196,42 @@ export default function Main() {
 									em React, Node.js e PostgreSQL e estou sempre ansiosa para
 									aprender novas tecnologias.
 								</p>
-								<div className="grid grid-cols-2 gap-4">
-									<div className="space-y-1">
-										<h3 className="text-lg font-medium">Principal Skills</h3>
-										<ul className="space-y-1 text-muted-foreground">
-											<li>React</li>
-											<li>Node.js</li>
-											<li>PostgreSQL</li>
-											<li>Docker</li>
-										</ul>
-									</div>
-									<div className="space-y-1">
-										<h3 className="text-lg font-medium">Experiência</h3>
-										<ul className="space-y-1 text-muted-foreground">
-											<li>
-												Full-Stack Developer, Freelancer. (2023 - Presente)
-											</li>
-											<li>Front-End Developer, UNIVS. (2019 - 2020)</li>
-										</ul>
-									</div>
-								</div>
 							</motion.div>
+						</div>
+					</section>
+
+					<section id="about" className="py-16 bg-muted">
+						<div className="container mx-auto px-4">
+							<h2 className="text-3xl font-bold text-center mb-12">
+								Experiência Profissional
+							</h2>
+							<div className="max-w-3xl mx-auto">
+								{experiences.map((exp, index) => (
+									<div key={1} className="mb-12 relative pl-8">
+										<div className="absolute left-0 top-0 mt-1 w-4 h-4 rounded-full bg-primary"></div>
+										{index !== experiences.length - 1 && (
+											<div className="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gray-200"></div>
+										)}
+										<div className="bg-white p-6 rounded-lg shadow-md">
+											<h3 className="text-xl font-semibold mb-2">
+												{exp.position}
+											</h3>
+											<p className="text-gray-600 mb-2">{exp.company}</p>
+											<p className="text-sm text-gray-500 mb-4 flex items-center">
+												<CalendarIcon className="w-4 h-4 mr-2" />
+												{exp.duration}
+											</p>
+											<ul className="list-disc list-inside text-gray-700">
+												{exp.description.map((item, i) => (
+													<li key={i} className="mb-1">
+														{item}
+													</li>
+												))}
+											</ul>
+										</div>
+									</div>
+								))}
+							</div>
 						</div>
 					</section>
 
