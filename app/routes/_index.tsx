@@ -108,9 +108,9 @@ export default function Main() {
 							Home
 						</Link>
 						<Link
-							to={"#about"}
+							to={"#xp"}
 							className="text-sm font-medium hover:underline underline-offset-4">
-							Sobre
+							Experiência
 						</Link>
 						<Link
 							to={"#skills"}
@@ -171,36 +171,7 @@ export default function Main() {
 						</div>
 					</section>
 
-					<section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-						<div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:items-center">
-							<div className="flex justify-center">
-								<motion.img
-									src={tifanyPfp}
-									alt="Tifany"
-									className="h-48 w-48 rounded-lg"
-								/>
-							</div>
-							<motion.div
-								initial="offscreen"
-								whileInView="onscreen"
-								viewport={{ once: true, amount: 0.8 }}
-								className="space-y-4">
-								<motion.h2
-									variants={cardVariants}
-									className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-									Sobre Mim
-								</motion.h2>
-								<p className="max-w-[600px] text-muted-foreground md:text-xl">
-									Sou uma desenvolvedora full-stack com mais de 2 anos de
-									experiência na construção de aplicações web. Sou especialista
-									em React, Node.js e PostgreSQL e estou sempre ansiosa para
-									aprender novas tecnologias.
-								</p>
-							</motion.div>
-						</div>
-					</section>
-
-					<section id="about" className="py-16 bg-muted">
+					<section id="xp" className="py-16 bg-muted">
 						<div className="container mx-auto px-4">
 							<h2 className="text-3xl font-bold text-center mb-12">
 								Experiência Profissional
