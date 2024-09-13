@@ -12,7 +12,6 @@ import {
 	listifyProject,
 	personalProject,
 	projectX,
-	tifanyPfp,
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
@@ -184,7 +183,7 @@ export default function Main() {
 											<div className="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gray-200"></div>
 										)}
 										<div className="bg-white p-6 rounded-lg shadow-md">
-											<h3 className="text-xl font-semibold mb-2">
+											<h3 className="text-gray-950 text-xl font-semibold mb-2">
 												{exp.position}
 											</h3>
 											<p className="text-gray-600 mb-2">{exp.company}</p>
