@@ -75,6 +75,25 @@ const experiences: Experience[] = [
 	},
 ]
 
+// interface Project {
+// 	id: number
+// 	title: string
+// 	description: string
+// 	image: string,
+// 	details: string
+//   }
+
+//   const projects: Project[] = [
+// 	{
+// 	  id: 1,
+// 	  title: "Portfolio",
+// 	  description: "",
+// 	  image: personalProject,
+// 	  details: ""
+// 	},
+
+//   ]
+
 export default function Main() {
 	const { scrollYProgress } = useScroll()
 	const defaultAnimation = (duration: number) => {
@@ -171,10 +190,16 @@ export default function Main() {
 					</section>
 
 					<section id="xp" className="py-16 bg-muted">
-						<div className="container mx-auto px-4">
-							<h2 className="text-3xl font-bold text-center mb-12">
+						<motion.div
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true, amount: 0.8 }}
+							className="container mx-auto px-4">
+							<motion.h2
+								variants={cardVariants}
+								className="text-3xl font-bold text-center mb-12">
 								Experiência Profissional
-							</h2>
+							</motion.h2>
 							<div className="max-w-3xl mx-auto">
 								{experiences.map((exp, index) => (
 									<div key={1} className="mb-12 relative pl-8">
@@ -202,7 +227,7 @@ export default function Main() {
 									</div>
 								))}
 							</div>
-						</div>
+						</motion.div>
 					</section>
 
 					<section
@@ -216,12 +241,9 @@ export default function Main() {
 								className="space-y-4 text-center">
 								<motion.h2
 									variants={cardVariants}
-									className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+									className="text-3xl font-bold text-center mb-12">
 									Skills
 								</motion.h2>
-								<p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
-									Confira as linguagens e frameworks que eu domino
-								</p>
 							</motion.div>
 							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
 								<div className="flex flex-col items-center gap-2">
@@ -358,13 +380,9 @@ export default function Main() {
 								className="space-y-4 text-center">
 								<motion.h2
 									variants={cardVariants}
-									className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+									className="text-3xl font-bold text-center mb-12">
 									Projetos
 								</motion.h2>
-								<p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
-									Confira alguns dos aplicativos web que desenvolvi para meus
-									clientes e projetos pessoais.
-								</p>
 							</motion.div>
 							<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 								<motion.div whileHover={{ scale: 1.2 }}>
