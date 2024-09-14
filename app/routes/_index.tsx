@@ -10,18 +10,26 @@ import {
 import {
 	initialImage,
 	listifyProject,
+	nyakoStore,
 	personalProject,
-	projectX,
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
 import { FaBluesky, FaGithub, FaNodeJs } from "react-icons/fa6"
-import { Card, CardHeader, CardContent } from "~/components/ui/card"
 import { DiJavascript } from "react-icons/di"
 import { FaDocker, FaReact } from "react-icons/fa"
 import { RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
 import { SiExpress, SiPostgresql, SiTypescript } from "react-icons/si"
 import type { MetaFunction } from "@remix-run/node"
+import { useState } from "react"
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+} from "~/components/ui/dialog"
+import { Button } from "~/components/ui/button"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -75,26 +83,50 @@ const experiences: Experience[] = [
 	},
 ]
 
-// interface Project {
-// 	id: number
-// 	title: string
-// 	description: string
-// 	image: string,
-// 	details: string
-//   }
+interface Project {
+	id: number
+	title: string
+	description: string
+	image: string
+	details: string
+}
 
-//   const projects: Project[] = [
-// 	{
-// 	  id: 1,
-// 	  title: "Portfolio",
-// 	  description: "",
-// 	  image: personalProject,
-// 	  details: ""
-// 	},
-
-//   ]
+const projects: Project[] = [
+	{
+		id: 1,
+		title: "Portfólio",
+		description: "Projeto Full-Stack para apresentar minhas habilidades.",
+		image: personalProject,
+		details:
+			"Esse projeto foi feito com o objetivo de demonstrar minhas habilidades e como eu as uso no dia-a-dia. Projeto feito em TypeScript, React, Remix e TailwindCSS, sempre estou atulizando e aplicando as melhores praticas de programacao.",
+	},
+	{
+		id: 2,
+		title: "Listify",
+		description: "Projeto Full-Stack para organização e tasks",
+		image: listifyProject,
+		details:
+			"Projeto feito com o objetivo em ajudar as pessoas com a organização de simples tasks diarias. Feito com TypeScript, React, Node, Remix, TailwindCSS e SupaBase.",
+	},
+	{
+		id: 3,
+		title: "Nyako-Store",
+		description: "Projeto Full-Stack de lojinha virtual.",
+		image: nyakoStore,
+		details: "Projeto ainda em processo de desenvolvimento UI.",
+	},
+	// {
+	// 	id: 3,
+	// 	title: "",
+	// 	description: "",
+	// 	image: ,
+	// 	details: "",
+	// },
+]
 
 export default function Main() {
+	const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
 	const { scrollYProgress } = useScroll()
 	const defaultAnimation = (duration: number) => {
 		return {
@@ -203,9 +235,9 @@ export default function Main() {
 							<div className="max-w-3xl mx-auto">
 								{experiences.map((exp, index) => (
 									<div key={1} className="mb-12 relative pl-8">
-										<div className="absolute left-0 top-0 mt-1 w-4 h-4 rounded-full bg-primary"></div>
+										<div className="absolute left-0 top-0 mt-1 w-4 h-4 rounded-full bg-primary" />
 										{index !== experiences.length - 1 && (
-											<div className="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gray-200"></div>
+											<div className="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gray-200" />
 										)}
 										<div className="bg-white p-6 rounded-lg shadow-md">
 											<h3 className="text-gray-950 text-xl font-semibold mb-2">
@@ -371,91 +403,63 @@ export default function Main() {
 						</div>
 					</section>
 
-					<section id="projects" className="w-full py-12 md:py-24 lg:py-32">
-						<div className="container grid gap-6 px-4 md:px-6">
-							<motion.div
-								initial="offscreen"
-								whileInView="onscreen"
-								viewport={{ once: true, amount: 0.8 }}
-								className="space-y-4 text-center">
-								<motion.h2
-									variants={cardVariants}
-									className="text-3xl font-bold text-center mb-12">
-									Projetos
-								</motion.h2>
-							</motion.div>
-							<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-								<motion.div whileHover={{ scale: 1.2 }}>
-									<Link to={"https://github.com/pinuya/pinuya-portfolio"}>
-										<Card>
-											<CardHeader>
-												<img
-													src={personalProject}
-													width={400}
-													height={300}
-													alt="Project 1"
-													className="aspect-video overflow-hidden rounded-t-lg object-cover"
-												/>
-											</CardHeader>
-											<CardContent className="space-y-2">
-												<h3 className="text-xl font-medium">Portfólio</h3>
-												<p className="text-muted-foreground">
-													Uma aplicação web de uso pessoal, onde apresento a
-													vocês quem eu sou. Utilizei Remix e TailwindCSS.
-												</p>
-											</CardContent>
-										</Card>
-									</Link>
-								</motion.div>
-
-								<motion.div whileHover={{ scale: 1.2 }}>
-									<Link to={"https://github.com/pinuya/listify-app"}>
-										<Card>
-											<CardHeader>
-												<img
-													src={listifyProject}
-													width={400}
-													height={300}
-													alt="Project 2"
-													className="aspect-video overflow-hidden rounded-t-lg object-cover"
-												/>
-											</CardHeader>
-											<CardContent className="space-y-2">
-												<h3 className="text-xl font-medium">Listify</h3>
-												<p className="text-muted-foreground">
-													Com Listify, você pode criar e gerenciar listas para
-													uma variedade de necessidades. Ainda em
-													desenvolvimento...
-												</p>
-											</CardContent>
-										</Card>
-									</Link>
-								</motion.div>
-
-								<motion.div whileHover={{ scale: 1.2 }}>
-									<Link to={""}>
-										<Card>
-											<CardHeader>
-												<img
-													src={projectX}
-													width={400}
-													height={300}
-													alt="Project 3"
-													className="aspect-video overflow-hidden rounded-t-lg object-cover"
-												/>
-											</CardHeader>
-											<CardContent className="space-y-2">
-												<h3 className="text-xl font-medium">Projeto Secreto</h3>
-												<p className="text-muted-foreground">
-													Ainda em processo de desenvolvimento. Após a
-													finalização e a aprovação do cliente, divulgarei aqui.
-												</p>
-											</CardContent>
-										</Card>
-									</Link>
-								</motion.div>
+					<section>
+						<motion.div
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true, amount: 0.8 }}
+							className="container mx-auto px-4 py-12">
+							<motion.h2
+								variants={cardVariants}
+								className="text-3xl font-bold text-center mb-8">
+								Projetos
+							</motion.h2>
+							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+								{projects.map((project) => (
+									<div
+										key={project.id}
+										className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-105"
+										onClick={() => setSelectedProject(project)}>
+										<img
+											src={project.image}
+											alt={project.title}
+											className="w-full h-48 object-cover"
+										/>
+										<div className="p-4">
+											<h3 className="text-xl font-semibold mb-2">
+												{project.title}
+											</h3>
+											<p className="text-muted-foreground">
+												{project.description}
+											</p>
+										</div>
+									</div>
+								))}
 							</div>
-						</div>
+
+							<Dialog
+								open={selectedProject !== null}
+								onOpenChange={() => setSelectedProject(null)}>
+								<DialogContent>
+									<DialogHeader>
+										<DialogTitle>{selectedProject?.title}</DialogTitle>
+										<DialogDescription>
+											<img
+												src={selectedProject?.image}
+												alt={selectedProject?.title}
+												className="w-full h-48 object-cover rounded-md mb-4"
+											/>
+											<p>{selectedProject?.details}</p>
+										</DialogDescription>
+									</DialogHeader>
+									<div className="mt-4 flex justify-end">
+										<Button onClick={() => setSelectedProject(null)}>
+											Close
+										</Button>
+									</div>
+								</DialogContent>
+							</Dialog>
+						</motion.div>
 					</section>
 				</main>
 

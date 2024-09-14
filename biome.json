@@ -7,6 +7,9 @@
 		"enabled": true,
 		"rules": {
 			"all": true,
+			"a11y": {
+				"useKeyWithClickEvents": "warn"
+			},
 			
 			"correctness": {
 				"noUndeclaredVariables": "off"
