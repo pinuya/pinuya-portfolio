@@ -10,6 +10,9 @@
 			"a11y": {
 				"useKeyWithClickEvents": "warn"
 			},
+			"suspicious":{
+				"noArrayIndexKey": "warn"
+			},
 			
 			"correctness": {
 				"noUndeclaredVariables": "off"

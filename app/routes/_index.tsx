@@ -15,11 +15,17 @@ import {
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
-import { FaBluesky, FaGithub, FaNodeJs } from "react-icons/fa6"
+import { FaBluesky, FaFigma, FaGithub, FaNodeJs } from "react-icons/fa6"
 import { DiJavascript } from "react-icons/di"
 import { FaDocker, FaReact } from "react-icons/fa"
 import { RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
-import { SiExpress, SiPostgresql, SiTypescript } from "react-icons/si"
+import {
+	SiExpress,
+	SiPostgresql,
+	SiTypescript,
+	SiVisualstudiocode,
+	SiVite,
+} from "react-icons/si"
 import type { MetaFunction } from "@remix-run/node"
 import { useState } from "react"
 import {
@@ -30,6 +36,7 @@ import {
 	DialogTitle,
 } from "~/components/ui/dialog"
 import { Button } from "~/components/ui/button"
+import type { IconType } from "react-icons/lib"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -122,6 +129,70 @@ const projects: Project[] = [
 	// 	image: ,
 	// 	details: "",
 	// },
+]
+
+interface Skill {
+	image: IconType
+	title: string
+}
+
+const skills: Skill[] = [
+	{
+		image: DiJavascript,
+		title: "JavaScript",
+	},
+	{
+		image: SiTypescript,
+		title: "TypeScript",
+	},
+	{
+		image: FaReact,
+		title: "React",
+	},
+	{
+		image: FaNodeJs,
+		title: "Node",
+	},
+	{
+		image: FaDocker,
+		title: "Docker",
+	},
+	{
+		image: SiPostgresql,
+		title: "Postgress",
+	},
+	{
+		image: RiTailwindCssFill,
+		title: "TailwindCSS",
+	},
+	{
+		image: RiRemixRunFill,
+		title: "Remix",
+	},
+	{
+		image: SiVite,
+		title: "Vite",
+	},
+	{
+		image: RiNextjsFill,
+		title: "Next.js",
+	},
+	{
+		image: SiExpress,
+		title: "Express",
+	},
+	{
+		image: FaGithub,
+		title: "Git",
+	},
+	{
+		image: SiVisualstudiocode,
+		title: "Visual Studio Code",
+	},
+	{
+		image: FaFigma,
+		title: "Figma",
+	},
 ]
 
 export default function Main() {
@@ -278,127 +349,18 @@ export default function Main() {
 								</motion.h2>
 							</motion.div>
 							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<DiJavascript className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										JavaScript
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<SiTypescript className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										TypeScript
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<FaReact className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										React
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<FaNodeJs className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Node.js
-									</span>
-								</div>
-
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<FaDocker className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Docker
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<SiPostgresql className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Postgress
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<RiTailwindCssFill className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										TailwindCSS
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<RiRemixRunFill className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Remix
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<SiExpress className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Express
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<RiNextjsFill className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Next.js
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<GitFork className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Git
-									</span>
-								</div>
-								<div className="flex flex-col items-center gap-2">
-									<motion.div
-										whileHover={{ scale: 1.2 }}
-										className="bg-muted rounded-full p-3">
-										<FigmaIcon className="w-6 h-6 text-primary" />
-									</motion.div>
-									<span className="text-sm font-medium text-muted-foreground">
-										Figma
-									</span>
-								</div>
+								{skills.map((s, index) => (
+									<div key={index} className="flex flex-col items-center gap-2">
+										<motion.div
+											whileHover={{ scale: 1.2 }}
+											className="bg-muted rounded-full p-3">
+											<s.image className="w-6 h-6 text-primary" />
+										</motion.div>
+										<span className="text-sm font-medium text-muted-foreground">
+											{s.title}
+										</span>
+									</div>
+								))}
 							</div>
 						</div>
 					</section>
