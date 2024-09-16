@@ -1,7 +1,6 @@
-import pfpInitial from "./pfpInitial.jpg"
 import personalProject from "./portfolioImg.png"
 import nyakoStore from "./nyakoStore.jpeg"
 import listifyProject from "./listifyProject.png"
-import initialImage from "./initialImage.jpg"
+import pfpInitial from "./pfpInitial.jpg"
 
-export { personalProject, pfpInitial, nyakoStore, listifyProject, initialImage }
+export { personalProject, nyakoStore, listifyProject, pfpInitial }

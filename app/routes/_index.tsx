@@ -1,9 +1,7 @@
 import { Link } from "@remix-run/react"
 import {
 	CalendarIcon,
-	FigmaIcon,
 	FileDownIcon,
-	GitFork,
 	InstagramIcon,
 	LinkedinIcon,
 } from "lucide-react"
@@ -12,6 +10,7 @@ import {
 	listifyProject,
 	nyakoStore,
 	personalProject,
+	pfpInitial,
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
@@ -282,7 +281,7 @@ export default function Main() {
 								</div>
 								<motion.img
 									{...buttonAnimation}
-									src={initialImage}
+									src={pfpInitial}
 									width="550"
 									height="550"
 									alt="Hero"
