@@ -6,7 +6,6 @@ import {
 	LinkedinIcon,
 } from "lucide-react"
 import {
-	initialImage,
 	listifyProject,
 	nyakoStore,
 	personalProject,
@@ -14,7 +13,7 @@ import {
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
-import { FaBluesky, FaFigma, FaGithub, FaNodeJs } from "react-icons/fa6"
+import { FaFigma, FaGithub, FaNodeJs } from "react-icons/fa6"
 import { DiJavascript } from "react-icons/di"
 import { FaDocker, FaReact } from "react-icons/fa"
 import { RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
@@ -60,6 +59,19 @@ const cardVariants: Variants = {
 		},
 	},
 }
+
+// const aniVariants: Variants = {
+// 	offscreen: {
+// 		opacity: 0,
+// 	},
+
+// 	onscreen: {
+// 		transition: {
+// 			opacity: 1,
+// 			duration: 0.8,
+// 		},
+// 	},
+// }
 
 interface Experience {
 	company: string
@@ -302,9 +314,13 @@ export default function Main() {
 								className="text-3xl font-bold text-center mb-12">
 								Experiência Profissional
 							</motion.h2>
-							<div className="max-w-3xl mx-auto">
+							<motion.div className="max-w-3xl mx-auto">
 								{experiences.map((exp, index) => (
-									<div key={1} className="mb-12 relative pl-8">
+									<motion.div
+										key={1}
+										initial={{ opacity: 0 }}
+										whileInView={{ opacity: 1 }}
+										className="mb-12 relative pl-8">
 										<div className="absolute left-0 top-0 mt-1 w-4 h-4 rounded-full bg-primary" />
 										{index !== experiences.length - 1 && (
 											<div className="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gray-200" />
@@ -326,9 +342,9 @@ export default function Main() {
 												))}
 											</ul>
 										</div>
-									</div>
+									</motion.div>
 								))}
-							</div>
+							</motion.div>
 						</motion.div>
 					</section>
 
@@ -347,7 +363,10 @@ export default function Main() {
 									Skills
 								</motion.h2>
 							</motion.div>
-							<div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+							<motion.div
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
 								{skills.map((s, index) => (
 									<div key={index} className="flex flex-col items-center gap-2">
 										<motion.div
@@ -360,7 +379,7 @@ export default function Main() {
 										</span>
 									</div>
 								))}
-							</div>
+							</motion.div>
 						</div>
 					</section>
 
@@ -375,7 +394,10 @@ export default function Main() {
 								className="text-3xl font-bold text-center mb-8">
 								Projetos
 							</motion.h2>
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+							<motion.div
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 								{projects.map((project) => (
 									<div
 										key={project.id}
@@ -396,7 +418,7 @@ export default function Main() {
 										</div>
 									</div>
 								))}
-							</div>
+							</motion.div>
 
 							<Dialog
 								open={selectedProject !== null}
@@ -430,12 +452,6 @@ export default function Main() {
 							&copy; 2024 Tifany Alves. Todos os direitos reservados.
 						</div>
 						<div className="flex items-center space-x-4">
-							<Link
-								to={"https://bsky.app/profile/pinuya.bsky.social"}
-								className="text-muted-foreground hover:text-foreground">
-								<FaBluesky className="h-5 w-5" />
-								<span className="sr-only">X</span>
-							</Link>
 							<Link
 								to={"https://www.linkedin.com/in/tifanyanunes/"}
 								className="text-muted-foreground hover:text-foreground">
