@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react"
+import { Link, useLoaderData } from "@remix-run/react"
 import {
 	CalendarIcon,
 	FileDownIcon,
@@ -13,17 +13,7 @@ import {
 } from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
-import { FaFigma, FaGithub, FaNodeJs } from "react-icons/fa6"
-import { DiJavascript } from "react-icons/di"
-import { FaDocker, FaReact } from "react-icons/fa"
-import { RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
-import {
-	SiExpress,
-	SiPostgresql,
-	SiTypescript,
-	SiVisualstudiocode,
-	SiVite,
-} from "react-icons/si"
+import { FaGithub } from "react-icons/fa6"
 import type { MetaFunction } from "@remix-run/node"
 import { useState } from "react"
 import {
@@ -34,7 +24,8 @@ import {
 	DialogTitle,
 } from "~/components/ui/dialog"
 import { Button } from "~/components/ui/button"
-import type { IconType } from "react-icons/lib"
+import type { Experience, Project, Skill } from "~/types"
+import { skillIcons } from "~/consts"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -72,141 +63,110 @@ const cardVariants: Variants = {
 // 		},
 // 	},
 // }
+export function loader() {
+	const experiences: Experience[] = [
+		{
+			company: "Autônomo",
+			position: "Software Engineer",
+			duration: "Jan 2022 - Present",
+			description: [
+				"Implementa novos recursos usando React e TypeScript, melhorando o envolvimento do usuário em 30%.",
+				"Desenvolve sites otimizados, responsivos e com design em alta no mercado.",
+			],
+		},
+		{
+			company: "UniVS - Centro Universitário Vale do Salgado",
+			position: "Frontend Developer",
+			duration: "Jan 2019 - Jan 2020",
+			description: [
+				"Desenvolveu sites utilizando React e NextJs.",
+				"Colaborou com designers UX para implementar designs responsivos.",
+			],
+		},
+	]
 
-interface Experience {
-	company: string
-	position: string
-	duration: string
-	description: string[]
+	const projects: Project[] = [
+		{
+			id: 1,
+			title: "Portfólio",
+			description: "Projeto Full-Stack para apresentar minhas habilidades.",
+			image: personalProject,
+			details:
+				"Esse projeto foi feito com o objetivo de demonstrar minhas habilidades e como eu as uso no dia-a-dia. Projeto feito em TypeScript, React, Remix e TailwindCSS, sempre estou atulizando e aplicando as melhores praticas de programacao.",
+		},
+		{
+			id: 2,
+			title: "Listify",
+			description: "Projeto Full-Stack para organização e tasks",
+			image: listifyProject,
+			details:
+				"Projeto feito com o objetivo em ajudar as pessoas com a organização de simples tasks diarias. Feito com TypeScript, React, Node, Remix, TailwindCSS e SupaBase.",
+		},
+		{
+			id: 3,
+			title: "Nyako-Store",
+			description: "Projeto Full-Stack de lojinha virtual.",
+			image: nyakoStore,
+			details: "Projeto ainda em processo de desenvolvimento UI.",
+		},
+		// {
+		// 	id: 3,
+		// 	title: "",
+		// 	description: "",
+		// 	image: ,
+		// 	details: "",
+		// },
+	]
+
+	const skills: Skill[] = [
+		{
+			title: "JavaScript",
+		},
+		{
+			title: "TypeScript",
+		},
+		{
+			title: "React",
+		},
+		{
+			title: "Node",
+		},
+		{
+			title: "Docker",
+		},
+		{
+			title: "Postgress",
+		},
+		{
+			title: "TailwindCSS",
+		},
+		{
+			title: "Remix",
+		},
+		{
+			title: "Vite",
+		},
+		{
+			title: "Next.js",
+		},
+		{
+			title: "Express",
+		},
+		{
+			title: "Git",
+		},
+		{
+			title: "Visual Studio Code",
+		},
+		{
+			title: "Figma",
+		},
+	]
+	return { experiences, projects, skills }
 }
-
-const experiences: Experience[] = [
-	{
-		company: "Autônomo",
-		position: "Software Engineer",
-		duration: "Jan 2022 - Present",
-		description: [
-			"Implementa novos recursos usando React e TypeScript, melhorando o envolvimento do usuário em 30%.",
-			"Desenvolve sites otimizados, responsivos e com design em alta no mercado.",
-		],
-	},
-	{
-		company: "UniVS - Centro Universitário Vale do Salgado",
-		position: "Frontend Developer",
-		duration: "Jan 2019 - Jan 2020",
-		description: [
-			"Desenvolveu sites utilizando React e NextJs.",
-			"Colaborou com designers UX para implementar designs responsivos.",
-		],
-	},
-]
-
-interface Project {
-	id: number
-	title: string
-	description: string
-	image: string
-	details: string
-}
-
-const projects: Project[] = [
-	{
-		id: 1,
-		title: "Portfólio",
-		description: "Projeto Full-Stack para apresentar minhas habilidades.",
-		image: personalProject,
-		details:
-			"Esse projeto foi feito com o objetivo de demonstrar minhas habilidades e como eu as uso no dia-a-dia. Projeto feito em TypeScript, React, Remix e TailwindCSS, sempre estou atulizando e aplicando as melhores praticas de programacao.",
-	},
-	{
-		id: 2,
-		title: "Listify",
-		description: "Projeto Full-Stack para organização e tasks",
-		image: listifyProject,
-		details:
-			"Projeto feito com o objetivo em ajudar as pessoas com a organização de simples tasks diarias. Feito com TypeScript, React, Node, Remix, TailwindCSS e SupaBase.",
-	},
-	{
-		id: 3,
-		title: "Nyako-Store",
-		description: "Projeto Full-Stack de lojinha virtual.",
-		image: nyakoStore,
-		details: "Projeto ainda em processo de desenvolvimento UI.",
-	},
-	// {
-	// 	id: 3,
-	// 	title: "",
-	// 	description: "",
-	// 	image: ,
-	// 	details: "",
-	// },
-]
-
-interface Skill {
-	image: IconType
-	title: string
-}
-
-const skills: Skill[] = [
-	{
-		image: DiJavascript,
-		title: "JavaScript",
-	},
-	{
-		image: SiTypescript,
-		title: "TypeScript",
-	},
-	{
-		image: FaReact,
-		title: "React",
-	},
-	{
-		image: FaNodeJs,
-		title: "Node",
-	},
-	{
-		image: FaDocker,
-		title: "Docker",
-	},
-	{
-		image: SiPostgresql,
-		title: "Postgress",
-	},
-	{
-		image: RiTailwindCssFill,
-		title: "TailwindCSS",
-	},
-	{
-		image: RiRemixRunFill,
-		title: "Remix",
-	},
-	{
-		image: SiVite,
-		title: "Vite",
-	},
-	{
-		image: RiNextjsFill,
-		title: "Next.js",
-	},
-	{
-		image: SiExpress,
-		title: "Express",
-	},
-	{
-		image: FaGithub,
-		title: "Git",
-	},
-	{
-		image: SiVisualstudiocode,
-		title: "Visual Studio Code",
-	},
-	{
-		image: FaFigma,
-		title: "Figma",
-	},
-]
 
 export default function Main() {
+	const { experiences, projects, skills } = useLoaderData<typeof loader>()
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
 	const { scrollYProgress } = useScroll()
@@ -372,7 +332,7 @@ export default function Main() {
 										<motion.div
 											whileHover={{ scale: 1.2 }}
 											className="bg-muted rounded-full p-3">
-											<s.image className="w-6 h-6 text-primary" />
+											{skillIcons[s.title as keyof typeof skillIcons]()}
 										</motion.div>
 										<span className="text-sm font-medium text-muted-foreground">
 											{s.title}
