@@ -51,18 +51,6 @@ const cardVariants: Variants = {
 	},
 }
 
-// const aniVariants: Variants = {
-// 	offscreen: {
-// 		opacity: 0,
-// 	},
-
-// 	onscreen: {
-// 		transition: {
-// 			opacity: 1,
-// 			duration: 0.8,
-// 		},
-// 	},
-// }
 export function loader() {
 	const experiences: Experience[] = [
 		{
@@ -184,7 +172,7 @@ export default function Main() {
 	return (
 		<div className="flex flex-col min-h-screen w-full">
 			<motion.div
-				className="progress-bar"
+				className="progress-bar z-10"
 				style={{ scaleX: scrollYProgress }}
 			/>
 			<div className="flex flex-col min-h-[100dvh]">
