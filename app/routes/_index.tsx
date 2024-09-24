@@ -26,6 +26,7 @@ import {
 import { Button } from "~/components/ui/button"
 import type { Experience, Project, Skill } from "~/types"
 import { skillIcons } from "~/consts"
+import { supabase } from "~/services/supabase.server"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -51,28 +52,7 @@ const cardVariants: Variants = {
 	},
 }
 
-export function loader() {
-	const experiences: Experience[] = [
-		{
-			company: "Autônomo",
-			position: "Software Engineer",
-			duration: "Jan 2022 - Present",
-			description: [
-				"Implementa novos recursos usando React e TypeScript, melhorando o envolvimento do usuário em 30%.",
-				"Desenvolve sites otimizados, responsivos e com design em alta no mercado.",
-			],
-		},
-		{
-			company: "UniVS - Centro Universitário Vale do Salgado",
-			position: "Frontend Developer",
-			duration: "Jan 2019 - Jan 2020",
-			description: [
-				"Desenvolveu sites utilizando React e NextJs.",
-				"Colaborou com designers UX para implementar designs responsivos.",
-			],
-		},
-	]
-
+export async function loader() {
 	const projects: Project[] = [
 		{
 			id: 1,
@@ -150,7 +130,15 @@ export function loader() {
 			title: "Figma",
 		},
 	]
-	return { experiences, projects, skills }
+
+	const { data: experiencesData, error: experiencesError } = await supabase
+		.from("experiences")
+		.select()
+	if (experiencesError) {
+		throw Error(experiencesError.message)
+	}
+
+	return { experiences: experiencesData, projects, skills }
 }
 
 export default function Main() {
@@ -283,11 +271,7 @@ export default function Main() {
 												{exp.duration}
 											</p>
 											<ul className="list-disc list-inside text-gray-700">
-												{exp.description.map((item, i) => (
-													<li key={i} className="mb-1">
-														{item}
-													</li>
-												))}
+												<li className="mb-1">{exp.description}</li>
 											</ul>
 										</div>
 									</motion.div>
