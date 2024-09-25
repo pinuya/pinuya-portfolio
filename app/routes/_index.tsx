@@ -5,12 +5,6 @@ import {
 	InstagramIcon,
 	LinkedinIcon,
 } from "lucide-react"
-import {
-	listifyProject,
-	nyakoStore,
-	personalProject,
-	pfpInitial,
-} from "~/assets/images"
 import { ModeToggle } from "~/components/mode-togle"
 import { motion, useScroll, type Variants } from "framer-motion"
 import { FaGithub } from "react-icons/fa6"
@@ -24,7 +18,7 @@ import {
 	DialogTitle,
 } from "~/components/ui/dialog"
 import { Button } from "~/components/ui/button"
-import type { Experience, Project, Skill } from "~/types"
+import type { Project, Skill } from "~/types"
 import { skillIcons } from "~/consts"
 import { supabase } from "~/services/supabase.server"
 
@@ -53,39 +47,6 @@ const cardVariants: Variants = {
 }
 
 export async function loader() {
-	const projects: Project[] = [
-		{
-			id: 1,
-			title: "Portfólio",
-			description: "Projeto Full-Stack para apresentar minhas habilidades.",
-			image: personalProject,
-			details:
-				"Esse projeto foi feito com o objetivo de demonstrar minhas habilidades e como eu as uso no dia-a-dia. Projeto feito em TypeScript, React, Remix e TailwindCSS, sempre estou atulizando e aplicando as melhores praticas de programacao.",
-		},
-		{
-			id: 2,
-			title: "Listify",
-			description: "Projeto Full-Stack para organização e tasks",
-			image: listifyProject,
-			details:
-				"Projeto feito com o objetivo em ajudar as pessoas com a organização de simples tasks diarias. Feito com TypeScript, React, Node, Remix, TailwindCSS e SupaBase.",
-		},
-		{
-			id: 3,
-			title: "Nyako-Store",
-			description: "Projeto Full-Stack de lojinha virtual.",
-			image: nyakoStore,
-			details: "Projeto ainda em processo de desenvolvimento UI.",
-		},
-		// {
-		// 	id: 3,
-		// 	title: "",
-		// 	description: "",
-		// 	image: ,
-		// 	details: "",
-		// },
-	]
-
 	const skills: Skill[] = [
 		{
 			title: "JavaScript",
@@ -131,6 +92,13 @@ export async function loader() {
 		},
 	]
 
+	const { data: projectsData, error: projectsError } = await supabase
+		.from("projects")
+		.select()
+	if (projectsError) {
+		throw Error(projectsError.message)
+	}
+
 	const { data: experiencesData, error: experiencesError } = await supabase
 		.from("experiences")
 		.select()
@@ -138,7 +106,7 @@ export async function loader() {
 		throw Error(experiencesError.message)
 	}
 
-	return { experiences: experiencesData, projects, skills }
+	return { experiences: experiencesData, projects: projectsData, skills }
 }
 
 export default function Main() {
@@ -229,7 +197,7 @@ export default function Main() {
 								</div>
 								<motion.img
 									{...buttonAnimation}
-									src={pfpInitial}
+									src="/assets/pfpInitial.jpg"
 									width="550"
 									height="550"
 									alt="Hero"
@@ -336,8 +304,8 @@ export default function Main() {
 										className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-105"
 										onClick={() => setSelectedProject(project)}>
 										<img
-											src={project.image}
-											alt={project.title}
+											src={project?.image ?? ""}
+											alt={project?.title ?? ""}
 											className="w-full h-48 object-cover"
 										/>
 										<div className="p-4">
