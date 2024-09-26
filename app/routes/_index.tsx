@@ -18,7 +18,7 @@ import {
 	DialogTitle,
 } from "~/components/ui/dialog"
 import { Button } from "~/components/ui/button"
-import type { Project, Skill } from "~/types"
+import type { Project } from "~/types"
 import { skillIcons } from "~/consts"
 import { supabase } from "~/services/supabase.server"
 
@@ -47,51 +47,6 @@ const cardVariants: Variants = {
 }
 
 export async function loader() {
-	const skills: Skill[] = [
-		{
-			title: "JavaScript",
-		},
-		{
-			title: "TypeScript",
-		},
-		{
-			title: "React",
-		},
-		{
-			title: "Node",
-		},
-		{
-			title: "Docker",
-		},
-		{
-			title: "Postgress",
-		},
-		{
-			title: "TailwindCSS",
-		},
-		{
-			title: "Remix",
-		},
-		{
-			title: "Vite",
-		},
-		{
-			title: "Next.js",
-		},
-		{
-			title: "Express",
-		},
-		{
-			title: "Git",
-		},
-		{
-			title: "Visual Studio Code",
-		},
-		{
-			title: "Figma",
-		},
-	]
-
 	const { data: projectsData, error: projectsError } = await supabase
 		.from("projects")
 		.select()
@@ -106,7 +61,18 @@ export async function loader() {
 		throw Error(experiencesError.message)
 	}
 
-	return { experiences: experiencesData, projects: projectsData, skills }
+	const { data: skillsData, error: skillsError } = await supabase
+		.from("skills")
+		.select()
+	if (skillsError) {
+		throw Error(skillsError.message)
+	}
+
+	return {
+		experiences: experiencesData,
+		projects: projectsData,
+		skills: skillsData,
+	}
 }
 
 export default function Main() {
@@ -272,7 +238,7 @@ export default function Main() {
 										<motion.div
 											whileHover={{ scale: 1.2 }}
 											className="bg-muted rounded-full p-3">
-											{skillIcons[s.title as keyof typeof skillIcons]()}
+											{skillIcons[s.title as keyof typeof skillIcons]?.()}
 										</motion.div>
 										<span className="text-sm font-medium text-muted-foreground">
 											{s.title}
