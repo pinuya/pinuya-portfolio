@@ -47,26 +47,21 @@ const cardVariants: Variants = {
 }
 
 export async function loader() {
-	const { data: projectsData, error: projectsError } = await supabase
-		.from("projects")
-		.select()
-	if (projectsError) {
-		throw Error(projectsError.message)
-	}
+	const [
+		{ data: projectsData, error: projectsError },
+		{ data: experiencesData, error: experiencesError },
+		{ data: skillsData, error: skillsError },
+	] = await Promise.all([
+		supabase.from("projects").select(),
+		supabase.from("experiences").select(),
+		supabase.from("skills").select(),
+	])
 
-	const { data: experiencesData, error: experiencesError } = await supabase
-		.from("experiences")
-		.select()
-	if (experiencesError) {
-		throw Error(experiencesError.message)
-	}
+	if (projectsError) throw Error(projectsError.message)
 
-	const { data: skillsData, error: skillsError } = await supabase
-		.from("skills")
-		.select()
-	if (skillsError) {
-		throw Error(skillsError.message)
-	}
+	if (experiencesError) throw Error(experiencesError.message)
+
+	if (skillsError) throw Error(skillsError.message)
 
 	return {
 		experiences: experiencesData,
