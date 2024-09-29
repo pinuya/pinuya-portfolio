@@ -21,6 +21,7 @@ import { Button } from "~/components/ui/button"
 import type { Project } from "~/types"
 import { skillIcons } from "~/consts"
 import { supabase } from "~/services/supabase.server"
+import { getExperiences, getProjects, getSkills } from "~/models"
 
 export const meta: MetaFunction = () => {
 	return [
@@ -47,26 +48,16 @@ const cardVariants: Variants = {
 }
 
 export async function loader() {
-	const [
-		{ data: projectsData, error: projectsError },
-		{ data: experiencesData, error: experiencesError },
-		{ data: skillsData, error: skillsError },
-	] = await Promise.all([
-		supabase.from("projects").select(),
-		supabase.from("experiences").select(),
-		supabase.from("skills").select(),
+	const [projects, experiences, skills] = await Promise.all([
+		getProjects(),
+		getExperiences(),
+		getSkills(),
 	])
 
-	if (projectsError) throw Error(projectsError.message)
-
-	if (experiencesError) throw Error(experiencesError.message)
-
-	if (skillsError) throw Error(skillsError.message)
-
 	return {
-		experiences: experiencesData,
-		projects: projectsData,
-		skills: skillsData,
+		experiences,
+		projects,
+		skills,
 	}
 }
 
