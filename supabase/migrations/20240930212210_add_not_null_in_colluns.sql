@@ -1,0 +1,26 @@
+ALTER TABLE projects
+ALTER COLUMN title SET NOT NULL;
+
+ALTER TABLE projects
+ALTER COLUMN description SET NOT NULL;
+
+ALTER TABLE projects
+ALTER COLUMN image SET NOT NULL;
+
+ALTER TABLE projects
+ALTER COLUMN details SET NOT NULL;
+
+ALTER TABLE experiences
+ALTER COLUMN company SET NOT NULL;
+
+ALTER TABLE experiences
+ALTER COLUMN position SET NOT NULL;
+
+ALTER TABLE experiences
+ALTER COLUMN duration SET NOT NULL;
+
+ALTER TABLE experiences
+ALTER COLUMN description SET NOT NULL;
+
+ALTER TABLE skills
+ALTER COLUMN  title SET NOT NULL;

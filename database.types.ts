@@ -11,64 +11,64 @@ export type Database = {
     Tables: {
       experiences: {
         Row: {
-          company: string | null
-          description: string | null
-          duration: string | null
+          company: string
+          description: string
+          duration: string
           id: number
-          position: string | null
+          position: string
         }
         Insert: {
-          company?: string | null
-          description?: string | null
-          duration?: string | null
+          company: string
+          description: string
+          duration: string
           id?: number
-          position?: string | null
+          position: string
         }
         Update: {
-          company?: string | null
-          description?: string | null
-          duration?: string | null
+          company?: string
+          description?: string
+          duration?: string
           id?: number
-          position?: string | null
+          position?: string
         }
         Relationships: []
       }
       projects: {
         Row: {
-          description: string | null
-          details: string | null
+          description: string
+          details: string
           id: number
-          image: string | null
-          title: string | null
+          image: string
+          title: string
         }
         Insert: {
-          description?: string | null
-          details?: string | null
+          description: string
+          details: string
           id?: number
-          image?: string | null
-          title?: string | null
+          image: string
+          title: string
         }
         Update: {
-          description?: string | null
-          details?: string | null
+          description?: string
+          details?: string
           id?: number
-          image?: string | null
-          title?: string | null
+          image?: string
+          title?: string
         }
         Relationships: []
       }
       skills: {
         Row: {
           id: number
-          title: string | null
+          title: string
         }
         Insert: {
           id?: number
-          title?: string | null
+          title: string
         }
         Update: {
           id?: number
-          title?: string | null
+          title?: string
         }
         Relationships: []
       }

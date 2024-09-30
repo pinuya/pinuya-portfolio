@@ -20,7 +20,6 @@ import {
 import { Button } from "~/components/ui/button"
 import type { Project } from "~/types"
 import { skillIcons } from "~/consts"
-import { supabase } from "~/services/supabase.server"
 import { getExperiences, getProjects, getSkills } from "~/models"
 
 export const meta: MetaFunction = () => {
