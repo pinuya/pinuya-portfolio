@@ -10,7 +10,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/pinuya.dev?color=red&logo=github&style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/pinuya/pinuya.dev?style=for-the-badge)
 
-<img src="/app/assets/portfolioImage.png" alt="Header"/>
+<img src="/public/assets/portfolioImage.png" alt="Header"/>
 
 ## Built With
 
