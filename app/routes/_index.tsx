@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import { ModeToggle } from "~/components/mode-togle";
 import { motion, useScroll, type Variants } from "framer-motion";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaTwitter } from "react-icons/fa6";
 import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
 import {
@@ -122,7 +122,7 @@ export default function Main() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2">
-                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    <h1 className="text-3xl text-[#9370DB] font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Tifany Alves
                     </h1>
                     <p className="text-xl text-muted-foreground">
@@ -155,7 +155,7 @@ export default function Main() {
                 </div>
                 <motion.img
                   {...buttonAnimation}
-                  src="/assets/pfpInitial.jpg"
+                  src="/assets/pfp.jpg"
                   width="550"
                   height="550"
                   alt="Hero"
@@ -324,6 +324,13 @@ export default function Main() {
             </div>
             <div className="flex items-center space-x-4">
               <Link
+                to={"https://github.com/pinuya"}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <FaGithub className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <Link
                 to={"https://www.linkedin.com/in/tifanyanunes/"}
                 className="text-muted-foreground hover:text-foreground"
               >
@@ -331,18 +338,18 @@ export default function Main() {
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                to={"https://www.instagram.com/imnotif/"}
+                to={"https://www.instagram.com/imaerials/"}
                 className="text-muted-foreground hover:text-foreground"
               >
                 <InstagramIcon className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                to={"https://github.com/pinuya"}
+                to={"https://x.com/pinuyaa"}
                 className="text-muted-foreground hover:text-foreground"
               >
-                <FaGithub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+                <FaTwitter className="h-5 w-5" />
+                <span className="sr-only">X</span>
               </Link>
             </div>
           </div>
