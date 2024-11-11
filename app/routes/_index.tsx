@@ -155,10 +155,10 @@ export default function Main() {
                 </div>
                 <motion.img
                   {...buttonAnimation}
-                  src="/assets/pfp.jpg"
+                  src="/assets/bocchiPfp.jpg"
                   width="550"
                   height="550"
-                  alt="Hero"
+                  alt="bocchi pfp"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
                 />
               </div>
