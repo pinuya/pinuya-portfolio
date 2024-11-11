@@ -122,7 +122,7 @@ export default function Main() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2">
-                    <h1 className="text-3xl text-[#9370DB] font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    <h1 className="text-3xl text-secondary-foreground font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Tifany Alves
                     </h1>
                     <p className="text-xl text-muted-foreground">
@@ -140,7 +140,7 @@ export default function Main() {
                   >
                     <Link
                       to={"#projects"}
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-[#c0a5fa]"
+                      className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       Veja meu trabalho
                     </Link>
