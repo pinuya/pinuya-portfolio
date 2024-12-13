@@ -1,0 +1,23 @@
+   /\ 
+  /  \ 
+ / /\ \
+/_/  \_\
+
+O arquivo aerials.txt explica as tecnologias utilizadas e os recursos gráficos empregados na criação deste portfólio.
+
+_______________________________________________________________________________
+
+DEVELOPER | ソフトウェア開発
+
+Tifany Alves
+Desenvolvedora web
+
+Tools:
+Visual Studio Code
+_______________________________________________________________________________
+
+TECNOLOGIA | テクノロジー
+
+React
+Remix
+Framer Motion

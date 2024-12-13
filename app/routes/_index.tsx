@@ -83,37 +83,10 @@ export default function Main() {
         style={{ scaleX: scrollYProgress }}
       />
       <div className="flex flex-col min-h-[100dvh]">
-        <header className="px-4 lg:px-6 h-14 flex items-center">
+        <header className="px-4 lg:px-6 h-14 flex self-end">
           <Link to={""} className="flex items-center justify-center">
             <ModeToggle />
-            <span className="sr-only">Portfolio</span>
           </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link
-              to={"#home"}
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Home
-            </Link>
-            <Link
-              to={"#xp"}
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Experiência
-            </Link>
-            <Link
-              to={"#skills"}
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Skills
-            </Link>
-            <Link
-              to={"#projects"}
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Projetos
-            </Link>
-          </nav>
         </header>
 
         <main className="flex-1">
@@ -122,16 +95,17 @@ export default function Main() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2">
-                    <h1 className="text-3xl text-secondary-foreground font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    <h1 className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Tifany Alves
                     </h1>
-                    <p className="text-xl text-muted-foreground">
+                    <p className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Software Engineer
                     </p>
                     <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                      Sou uma engenheira de software apaixonada com foco na
-                      construção aplicativos da web modernos, escaláveis ​​e
-                      fáceis de usar.
+                      Formada em Analise e Desenvolvimento de Sistemas,
+                      atualmente sendo uma Software Engineer com foco no
+                      Front-End. Buscando sempre desenvolver telas robustas e
+                      responsivas.
                     </p>
                   </motion.div>
                   <motion.div
@@ -155,7 +129,7 @@ export default function Main() {
                 </div>
                 <motion.img
                   {...buttonAnimation}
-                  src="/assets/bocchiPfp.jpg"
+                  src="/assets/a2.jpg"
                   width="550"
                   height="550"
                   alt="bocchi pfp"
@@ -320,7 +294,9 @@ export default function Main() {
         <footer className="bg-muted py-6 text-muted-foreground">
           <div className="container flex items-center justify-between">
             <div className="text-sm">
-              &copy; 2024 Tifany Alves. Todos os direitos reservados.
+              &copy; Feito com 💜 2024{" "}
+              <Link to={"/aerials.txt"}>Tifany Alves</Link>. Todos os direitos
+              reservados.
             </div>
             <div className="flex items-center space-x-4">
               <Link
@@ -345,7 +321,7 @@ export default function Main() {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                to={"https://x.com/pinuyaa"}
+                to={"https://x.com/aerialsdev"}
                 className="text-muted-foreground hover:text-foreground"
               >
                 <FaTwitter className="h-5 w-5" />
