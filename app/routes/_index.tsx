@@ -21,6 +21,7 @@ import { Button } from "~/components/ui/button";
 import type { Project } from "~/types";
 import { skillIcons } from "~/consts";
 import { getExperiences, getProjects, getSkills } from "~/models";
+import ScrollIndicator from "~/components/ScrollIndicator";
 
 export const meta: MetaFunction = () => {
   return [
@@ -84,9 +85,9 @@ export default function Main() {
       />
       <div className="flex flex-col min-h-[100dvh]">
         <header className="px-4 lg:px-6 h-14 flex self-end">
-          <Link to={""} className="flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <ModeToggle />
-          </Link>
+          </div>
         </header>
 
         <main className="flex-1">
@@ -101,7 +102,7 @@ export default function Main() {
                     <p className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Software Engineer
                     </p>
-                    <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                    <p className="max-w-[600px] text-muted-foreground">
                       Formada em Analise e Desenvolvimento de Sistemas,
                       atualmente sendo uma Software Engineer com foco no
                       Front-End. Buscando sempre desenvolver telas robustas e
@@ -136,6 +137,7 @@ export default function Main() {
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
                 />
               </div>
+              <ScrollIndicator />
             </div>
           </section>
 
@@ -295,8 +297,10 @@ export default function Main() {
           <div className="container flex items-center justify-between">
             <div className="text-sm">
               &copy; Feito com 💜 2024{" "}
-              <Link to={"/aerials.txt"}>Tifany Alves</Link>. Todos os direitos
-              reservados.
+              <a href={"/aerials.html"} className="underline">
+                Aerials
+              </a>
+              .
             </div>
             <div className="flex items-center space-x-4">
               <Link
