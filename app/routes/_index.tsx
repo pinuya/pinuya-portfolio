@@ -282,7 +282,15 @@ export default function Main() {
                       <p>{selectedProject?.details}</p>
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="mt-4 flex justify-end">
+                  <div className="mt-4 flex justify-between">
+                    <div>
+                      <Link to={"/"}>
+                        <Button className="gap-2" variant={"secondary"}>
+                          <FaGithub /> GitHub
+                        </Button>
+                      </Link>
+                    </div>
+
                     <Button onClick={() => setSelectedProject(null)}>
                       Close
                     </Button>
@@ -305,30 +313,30 @@ export default function Main() {
             <div className="flex items-center space-x-4">
               <Link
                 to={"https://github.com/pinuya"}
-                className="text-muted-foreground hover:text-foreground"
+                className="relative group inline-block"
               >
-                <FaGithub className="h-5 w-5" />
+                <FaGithub className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-gray-800" />
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
                 to={"https://www.linkedin.com/in/tifanyanunes/"}
-                className="text-muted-foreground hover:text-foreground"
+                className="relative group inline-block"
               >
-                <LinkedinIcon className="h-5 w-5" />
+                <LinkedinIcon className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-blue-500" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
                 to={"https://www.instagram.com/imaerials/"}
-                className="text-muted-foreground hover:text-foreground"
+                className="relative group inline-block"
               >
-                <InstagramIcon className="h-5 w-5" />
+                <InstagramIcon className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-purple-500" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 to={"https://x.com/aerialsdev"}
-                className="text-muted-foreground hover:text-foreground"
+                className="relative group inline-block"
               >
-                <FaTwitter className="h-5 w-5" />
+                <FaTwitter className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-blue-400" />
                 <span className="sr-only">X</span>
               </Link>
             </div>
