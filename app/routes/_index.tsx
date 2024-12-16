@@ -284,7 +284,7 @@ export default function Main() {
                   </DialogHeader>
                   <div className="mt-4 flex justify-between">
                     <div>
-                      <Link to={"/"}>
+                      <Link to={selectedProject?.link ?? ""}>
                         <Button className="gap-2" variant={"secondary"}>
                           <FaGithub /> GitHub
                         </Button>

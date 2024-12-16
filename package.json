@@ -23,7 +23,7 @@
     "@supabase/ssr": "github:supabase/ssr",
     "@supabase/supabase-js": "^2.45.4",
     "@vercel/remix": "^2.9.2-patch.2",
-    "caniuse-lite": "^1.0.30001688",
+    "caniuse-lite": "^1.0.30001689",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.0.4",

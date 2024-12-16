@@ -1,0 +1,1 @@
+ALTER TABLE projects ADD link VARCHAR(255);
