@@ -141,7 +141,7 @@ export default function Main() {
             </div>
           </section>
 
-          <section id="xp" className="py-16 bg-muted">
+          <section id="xp" className="py-16   ">
             <motion.div
               initial="offscreen"
               whileInView="onscreen"
@@ -301,7 +301,7 @@ export default function Main() {
           </section>
         </main>
 
-        <footer className="bg-muted py-6 text-muted-foreground">
+        <footer className="border-t-[1px] py-6 text-muted-foreground">
           <div className="container flex items-center justify-between">
             <div className="text-sm">
               &copy; Feito com 💜 2024{" "}
@@ -315,7 +315,7 @@ export default function Main() {
                 to={"https://github.com/pinuya"}
                 className="relative group inline-block"
               >
-                <FaGithub className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-gray-800" />
+                <FaGithub className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-white" />
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link

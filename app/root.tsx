@@ -15,6 +15,7 @@ import {
 } from "remix-themes";
 import { themeSessionResolver } from "./cookies";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import Footer from "./components/Footer";
 
 export const links: LinksFunction = () => {
   return [
@@ -51,6 +52,7 @@ export default function AppWithProviders() {
   return (
     <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
       <App />
+      {/* <Footer /> */}
     </ThemeProvider>
   );
 }
