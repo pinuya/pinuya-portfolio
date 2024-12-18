@@ -39,7 +39,6 @@ export const links: LinksFunction = () => {
   ];
 };
 
-// Return the theme from the session storage using the loader
 export async function loader({ request }: LoaderFunctionArgs) {
   const { getTheme } = await themeSessionResolver(request);
   return {
@@ -51,8 +50,10 @@ export default function AppWithProviders() {
   const data = useLoaderData<typeof loader>();
   return (
     <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
-      <App />
-      {/* <Footer /> */}
+      <div>
+        <App />
+        {/* <Footer /> */}
+      </div>
     </ThemeProvider>
   );
 }
