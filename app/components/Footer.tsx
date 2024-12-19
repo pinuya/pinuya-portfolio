@@ -4,7 +4,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-muted py-6 text-muted-foreground">
+    <footer className="py-6 text-muted-foreground">
       <div className="container flex items-center justify-between">
         <div className="text-sm">
           &copy; Feito com 💜 2024{" "}

@@ -16,6 +16,7 @@ import {
 import { themeSessionResolver } from "./cookies";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 export const links: LinksFunction = () => {
   return [
@@ -50,10 +51,7 @@ export default function AppWithProviders() {
   const data = useLoaderData<typeof loader>();
   return (
     <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
-      <div>
-        <App />
-        {/* <Footer /> */}
-      </div>
+      <App />
     </ThemeProvider>
   );
 }
@@ -71,11 +69,13 @@ export function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
+      <Nav />
       <body className="font-poppins">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
+      <Footer />
     </html>
   );
 }

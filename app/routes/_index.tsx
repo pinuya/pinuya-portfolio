@@ -1,13 +1,7 @@
 import { Link, useLoaderData } from "@remix-run/react";
-import {
-  CalendarIcon,
-  FileDownIcon,
-  InstagramIcon,
-  LinkedinIcon,
-} from "lucide-react";
-import { ModeToggle } from "~/components/mode-togle";
+import { CalendarIcon, FileDownIcon } from "lucide-react";
 import { motion, useScroll, type Variants } from "framer-motion";
-import { FaGithub, FaTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
 import {
@@ -84,12 +78,6 @@ export default function Main() {
         style={{ scaleX: scrollYProgress }}
       />
       <div className="flex flex-col min-h-[100dvh]">
-        <header className="px-4 lg:px-6 h-14 flex self-end">
-          <div className="flex items-center justify-center">
-            <ModeToggle />
-          </div>
-        </header>
-
         <main className="flex-1">
           <section id="home" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-6">
@@ -141,7 +129,7 @@ export default function Main() {
             </div>
           </section>
 
-          <section id="xp" className="py-16   ">
+          <section id="xp" className="py-16">
             <motion.div
               initial="offscreen"
               whileInView="onscreen"
@@ -300,48 +288,6 @@ export default function Main() {
             </motion.div>
           </section>
         </main>
-
-        <footer className="border-t-[1px] py-6 text-muted-foreground">
-          <div className="container flex items-center justify-between">
-            <div className="text-sm">
-              &copy; Feito com 💜 2024{" "}
-              <a href={"/aerials.html"} className="underline">
-                Aerials
-              </a>
-              .
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link
-                to={"https://github.com/pinuya"}
-                className="relative group inline-block"
-              >
-                <FaGithub className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-white" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link
-                to={"https://www.linkedin.com/in/tifanyanunes/"}
-                className="relative group inline-block"
-              >
-                <LinkedinIcon className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-blue-500" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link
-                to={"https://www.instagram.com/imaerials/"}
-                className="relative group inline-block"
-              >
-                <InstagramIcon className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-purple-500" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link
-                to={"https://x.com/aerialsdev"}
-                className="relative group inline-block"
-              >
-                <FaTwitter className="h-5 w-5 text-muted-foreground transition-all duration-500 group-hover:text-blue-400" />
-                <span className="sr-only">X</span>
-              </Link>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   );
