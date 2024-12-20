@@ -218,12 +218,6 @@ export default function Main() {
                           </div>
                         )}
                       </div>
-
-                      <div>
-                        <Button onClick={() => setSelectedProject(null)}>
-                          Close
-                        </Button>
-                      </div>
                     </div>
                   </DialogContent>
                 )}
