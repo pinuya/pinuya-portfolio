@@ -11,7 +11,8 @@ export interface Project {
 	description: string
 	image: string
 	details: string
-	link: string
+	link: string | null
+	website?: string | null
 }
 
 export interface Skill {
