@@ -89,7 +89,7 @@ export default function Main() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2">
-                    <h1 className="text-2xl text-muted-foreground tracking-wider uppercase">
+                    <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
                       Tifany Alves
                     </h1>
                     <p className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
