@@ -21,6 +21,7 @@ import type { Project } from "~/types";
 import { skillIcons } from "~/consts";
 import { getExperiences, getProjects, getSkills } from "~/models";
 import ScrollIndicator from "~/components/ScrollIndicator";
+import { DecoderText } from "~/components/decoder-text";
 
 export const meta: MetaFunction = () => {
   return [
@@ -90,7 +91,7 @@ export default function Main() {
                 <div className="flex flex-col justify-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2">
                     <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
-                      Tifany Alves
+                      <DecoderText text={"Tifany Nunes"} delay={500} />
                     </h1>
                     <p className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Software Engineer
