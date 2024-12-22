@@ -21,6 +21,7 @@ import type { Project } from "~/types";
 import { skillIcons } from "~/consts";
 import { getExperiences, getProjects, getSkills } from "~/models";
 import ScrollIndicator from "~/components/ScrollIndicator";
+import { DecoderText } from "~/components/decoder-text";
 
 export const meta: MetaFunction = () => {
   return [
@@ -90,7 +91,7 @@ export default function Main() {
                 <div className="flex flex-col justify-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2">
                     <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
-                      Tifany Alves
+                      <DecoderText text={"Tifany Nunes"} delay={500} />
                     </h1>
                     <p className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Software Engineer
@@ -141,12 +142,9 @@ export default function Main() {
               viewport={{ once: true, amount: 0.8 }}
               className="container mx-auto px-4 py-12"
             >
-              <motion.h2
-                variants={cardVariants}
-                className="text-3xl font-bold text-center mb-8"
-              >
-                Projetos
-              </motion.h2>
+              <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
+                <DecoderText text={"Projetos"} delay={500} />
+              </h1>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -155,7 +153,7 @@ export default function Main() {
                 {projects.map((project) => (
                   <div
                     key={project.id}
-                    className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-105"
+                    className="mt-4 bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-105"
                     onClick={() => setSelectedProject(project)}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ")
@@ -276,12 +274,15 @@ export default function Main() {
               viewport={{ once: true, amount: 0.8 }}
               className="container mx-auto px-4 py-12"
             >
-              <h1 className="text-3xl font-bold">Olá</h1>
+              <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
+                <DecoderText text={"Olá"} delay={500} />
+              </h1>
               <div className="max-w-96 text-gray-300">
                 <p>
-                  Meu nome é Tifany, atualmente moro no Brasil e trabalho como
-                  desenvolvedora Front-End e UX Designer. Meus projetos incluem
-                  UX Design e um código limpo e eficiente, você pode checar meu{" "}
+                  Meu nome é Tifany, atualmente moro no Brasil. Sou formada em
+                  Analise e Desenvolvimento de Sistemas, atualmente sendo uma
+                  Software Engineer com foco no Front-End. Buscando sempre
+                  desenvolver telas robustas e responsivas.{" "}
                   <Link to={"/curriculum"}>
                     <span className="text-purple-400 cursor-pointer hover:text-purple-600">
                       curriculo aqui
