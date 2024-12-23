@@ -1,10 +1,5 @@
 import { Link, useLoaderData } from "@remix-run/react";
-import {
-  ArrowUpRight,
-  CalendarIcon,
-  FileDownIcon,
-  SendHorizontal,
-} from "lucide-react";
+import { ArrowUpRight, SendHorizontal } from "lucide-react";
 import { motion, useScroll, type Variants } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import type { MetaFunction } from "@remix-run/node";
@@ -22,6 +17,7 @@ import { skillIcons } from "~/consts";
 import { getExperiences, getProjects, getSkills } from "~/models";
 import ScrollIndicator from "~/components/ScrollIndicator";
 import { DecoderText } from "~/components/decoder-text";
+import ThreeJsParticles from "~/components/ThreeJsParticles";
 
 export const meta: MetaFunction = () => {
   return [
@@ -62,7 +58,7 @@ export async function loader() {
 }
 
 export default function Main() {
-  const { experiences, projects, skills } = useLoaderData<typeof loader>();
+  const { projects, skills } = useLoaderData<typeof loader>();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const { scrollYProgress } = useScroll();
@@ -85,52 +81,28 @@ export default function Main() {
       />
       <div className="flex flex-col min-h-[100dvh]">
         <main className="flex-1">
-          <section id="home" className="w-full py-12 md:py-24 lg:py-32">
-            <div className="container px-4 md:px-6">
-              <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-                <div className="flex flex-col justify-center space-y-4">
-                  <motion.div {...textAnimation} className="space-y-2">
-                    <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
+          <section
+            id="home"
+            className="w-full h-screen py-12 md:py-24 lg:py-32"
+          >
+            <div className="relative container px-4 md:px-6 h-full flex justify-center items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full">
+                <div className="flex flex-col justify-start items-center space-y-4">
+                  <motion.div {...textAnimation} className="space-y-2 ">
+                    <h1 className="self-start text-2xl text-muted-foreground tracking-widest uppercase">
                       <DecoderText text={"Tifany Nunes"} delay={500} />
                     </h1>
                     <p className="text-3xl text-secondary-foreground font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none">
                       Software Engineer
                     </p>
-                    <p className="max-w-[600px] text-muted-foreground">
-                      Formada em Analise e Desenvolvimento de Sistemas,
-                      atualmente sendo uma Software Engineer com foco no
-                      Front-End. Buscando sempre desenvolver telas robustas e
-                      responsivas.
-                    </p>
-                  </motion.div>
-                  <motion.div
-                    {...buttonAnimation}
-                    className="flex flex-col gap-2 min-[400px]:flex-row"
-                  >
-                    <Link
-                      to={"#projects"}
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    >
-                      Veja meu trabalho
-                    </Link>
-                    <Link
-                      to={"/curriculoTifany.pdf"}
-                      target="_blank"
-                      className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    >
-                      Baixar curriculo <FileDownIcon className="ml-2 h-4 w-4" />
-                    </Link>
                   </motion.div>
                 </div>
-                <motion.img
-                  {...buttonAnimation}
-                  src="/assets/a2.jpg"
-                  width="550"
-                  height="550"
-                  alt="bocchi pfp"
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-                />
+
+                <div className="absolute top-[-1200px] ">
+                  <ThreeJsParticles />
+                </div>
               </div>
+
               <ScrollIndicator />
             </div>
           </section>
@@ -142,7 +114,7 @@ export default function Main() {
               viewport={{ once: true, amount: 0.8 }}
               className="container mx-auto px-4 py-12"
             >
-              <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
+              <h1 className="text-2xl text-foreground tracking-widest uppercase font-semibold">
                 <DecoderText text={"Projetos"} delay={500} />
               </h1>
               <motion.div
@@ -223,118 +195,89 @@ export default function Main() {
             </motion.div>
           </section>
 
-          <section id="xp" className="py-16">
-            <motion.div
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.8 }}
-              className="container mx-auto px-4"
-            >
-              <motion.h2
-                variants={cardVariants}
-                className="text-3xl font-bold text-center mb-12"
-              >
-                Experiência Profissional
-              </motion.h2>
-              <motion.div className="max-w-3xl mx-auto">
-                {experiences.map((exp, index) => (
-                  <motion.div
-                    key={1}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="mb-12 relative pl-8"
-                  >
-                    <div className="absolute left-0 top-0 mt-1 w-4 h-4 rounded-full bg-primary" />
-                    {index !== experiences.length - 1 && (
-                      <div className="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gray-200" />
-                    )}
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <h3 className="text-gray-950 text-xl font-semibold mb-2">
-                        {exp.position}
-                      </h3>
-                      <p className="text-gray-600 mb-2">{exp.company}</p>
-                      <p className="text-sm text-gray-500 mb-4 flex items-center">
-                        <CalendarIcon className="w-4 h-4 mr-2" />
-                        {exp.duration}
-                      </p>
-                      <ul className="list-disc list-inside text-gray-700">
-                        <li className="mb-1">{exp.description}</li>
-                      </ul>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
-          </section>
-
-          {/* <section id="about">
+          <section id="about">
             <motion.div
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.8 }}
               className="container mx-auto px-4 py-12"
             >
-              <h1 className="text-2xl text-muted-foreground tracking-widest uppercase">
+              <h1 className="text-2xl text-foreground tracking-widest uppercase font-semibold">
                 <DecoderText text={"Olá"} delay={500} />
               </h1>
-              <div className="max-w-96 text-gray-300">
-                <p>
-                  Meu nome é Tifany, atualmente moro no Brasil. Sou formada em
-                  Analise e Desenvolvimento de Sistemas, atualmente sendo uma
-                  Software Engineer com foco no Front-End. Buscando sempre
-                  desenvolver telas robustas e responsivas.{" "}
-                  <Link to={"/curriculum"}>
-                    <span className="text-purple-400 cursor-pointer hover:text-purple-600">
-                      curriculo aqui
-                    </span>
-                  </Link>
-                  . Sinto-me confortável projetando meus próprios designs e
-                  aplicando-os na prática durante o desenvolvimento. Se você
-                  está interessado nas ferramentas e softwares que utilizo,
-                  confira minha{" "}
-                  <Link to={"/uses"}>
-                    <span className="text-purple-400 cursor-pointer hover:text-purple-600">
-                      página de uso
-                    </span>
-                  </Link>
-                  .
-                </p>
+              <div className="flex items-center justify-between">
+                <div className="max-w-lg text-muted-foreground">
+                  <div className="gap-4 flex flex-col tracking-wide">
+                    <p>
+                      Meu nome é Tifany, atualmente moro no Brasil. Sou formada
+                      em Analise e Desenvolvimento de Sistemas, atualmente sendo
+                      uma Software Engineer com foco no Front-End. Buscando
+                      sempre desenvolver telas robustas e responsivas. Voce pode
+                      conferir meu{" "}
+                      <Link to={"/curriculum"}>
+                        <span className="relative text-purple-400 cursor-pointer group">
+                          curriculo aqui
+                          <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 ease-in-out group-hover:w-full" />
+                        </span>
+                      </Link>
+                      .
+                    </p>
+                    <p>
+                      Sinto-me confortável projetando meus próprios designs e
+                      aplicando-os na prática durante o desenvolvimento. Se você
+                      está interessado nas ferramentas e softwares que utilizo,
+                      confira minha{" "}
+                      <Link to={"/uses"}>
+                        <span className="relative text-purple-400 cursor-pointer group">
+                          página de uso
+                          <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 ease-in-out group-hover:w-full" />
+                        </span>
+                      </Link>
+                      .
+                    </p>
+                    <p>
+                      Nas horas vagas gosto de jogar Roblox e coleciono
+                      Sylvanian Families. Estou sempre disposta a ouvir sobre
+                      novos projetos entao fique à vontade para me escrever.
+                    </p>
+                    <a href="/contact">
+                      <button
+                        type="button"
+                        className="font-semibold relative overflow-hidden bg-transparent text-purple-500 px-4 py-1 transition duration-300 group"
+                      >
+                        <span className="absolute inset-0 bg-purple-500 bg-opacity-50 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 origin-left" />
+                        <span className="flex flex-row relative gap-2 items-center z-10 text-foreground   ">
+                          <SendHorizontal />
+                          Envie uma mensagem
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
 
-                <p>
-                  Nas horas vagas gosto de jogar Roblox e coleciono Sylvanian
-                  Families. Estou sempre disposta a ouvir sobre novos projetos
-                  entao fique à vontade para me escrever.
-                </p>
+                <div className="relative">
+                  {/* Texto em Katakana */}
+                  <p className="absolute rotate-90 top-32 -right-60 font-bold text-9xl text-foreground">
+                    アンテナ
+                  </p>
+
+                  {/* Imagem */}
+                  <motion.img
+                    src="/assets/aerials.jpg"
+                    width="550"
+                    height="550"
+                    alt="aerials profile"
+                  />
+                </div>
               </div>
-
-              <button className="font-semibold relative overflow-hidden bg-transparent text-purple-500 px-4 py-1 transition duration-300 group">
-                <span className="absolute inset-0 bg-purple-500 bg-opacity-50 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 origin-left" />
-                <span className="flex flex-row relative gap-2 items-center z-10 text-white group-hover:text-white">
-                  <SendHorizontal />
-                  Envie uma mensagem
-                </span>
-              </button>
             </motion.div>
-          </section> */}
+          </section>
 
           <section
             id="skills"
             className="container mx-auto py-12 md:py-16 lg:py-20"
           >
             <div className="space-y-6 md:space-y-8 lg:space-y-10">
-              <motion.div
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true, amount: 0.8 }}
-                className="space-y-4 text-center"
-              >
-                <motion.h2
-                  variants={cardVariants}
-                  className="text-3xl font-bold text-center mb-12"
-                >
-                  Skills
-                </motion.h2>
-              </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
