@@ -1,10 +1,5 @@
 import { Link, useLoaderData } from "@remix-run/react";
-import {
-  ArrowUpRight,
-  CalendarIcon,
-  FileDownIcon,
-  SendHorizontal,
-} from "lucide-react";
+import { ArrowUpRight, SendHorizontal } from "lucide-react";
 import { motion, useScroll, type Variants } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import type { MetaFunction } from "@remix-run/node";
