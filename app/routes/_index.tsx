@@ -17,7 +17,8 @@ import { skillIcons } from "~/consts";
 import { getExperiences, getProjects, getSkills } from "~/models";
 import ScrollIndicator from "~/components/ScrollIndicator";
 import { DecoderText } from "~/components/decoder-text";
-import ThreeJsParticles from "~/components/ThreeJsParticles";
+import ThreeJsParticles from "~/components/ThreeJsParticles.client";
+import { ClientOnly } from "~/components/client-only";
 
 export const meta: MetaFunction = () => {
   return [
@@ -99,7 +100,7 @@ export default function Main() {
                 </div>
 
                 <div className="h-[600px]">
-                  <ThreeJsParticles />
+                  <ClientOnly>{() => <ThreeJsParticles />}</ClientOnly>
                 </div>
               </div>
 
