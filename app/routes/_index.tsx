@@ -245,16 +245,18 @@ export default function Main() {
                       Sylvanian Families. Estou sempre disposta a ouvir sobre
                       novos projetos entao fique à vontade para me escrever.
                     </p>
-                    <button
-                      type="button"
-                      className="font-semibold relative overflow-hidden bg-transparent text-purple-500 px-4 py-1 transition duration-300 group"
-                    >
-                      <span className="absolute inset-0 bg-purple-500 bg-opacity-50 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 origin-left" />
-                      <span className="flex flex-row relative gap-2 items-center z-10 text-foreground   ">
-                        <SendHorizontal />
-                        Envie uma mensagem
-                      </span>
-                    </button>
+                    <a href="/contact">
+                      <button
+                        type="button"
+                        className="font-semibold relative overflow-hidden bg-transparent text-purple-500 px-4 py-1 transition duration-300 group"
+                      >
+                        <span className="absolute inset-0 bg-purple-500 bg-opacity-50 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 origin-left" />
+                        <span className="flex flex-row relative gap-2 items-center z-10 text-foreground   ">
+                          <SendHorizontal />
+                          Envie uma mensagem
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
 
