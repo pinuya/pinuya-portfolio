@@ -85,9 +85,9 @@ export default function Main() {
             id="home"
             className="w-full h-screen py-12 md:py-24 lg:py-32"
           >
-            <div className="relative container px-4 md:px-6 h-full flex justify-center items-center">
+            <div className=" container flex">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full">
-                <div className="flex flex-col justify-start items-center space-y-4">
+                <div className="flex flex-col justify-center items-center space-y-4">
                   <motion.div {...textAnimation} className="space-y-2 ">
                     <h1 className="self-start text-2xl text-muted-foreground tracking-widest uppercase">
                       <DecoderText text={"Tifany Nunes"} delay={500} />
@@ -98,7 +98,7 @@ export default function Main() {
                   </motion.div>
                 </div>
 
-                <div className="absolute top-[-1200px] ">
+                <div className="h-[600px]">
                   <ThreeJsParticles />
                 </div>
               </div>
