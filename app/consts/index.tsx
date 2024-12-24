@@ -5,7 +5,7 @@ import {
   FaNodeJs,
   FaPython,
 } from "react-icons/fa6";
-import { DiJavascript } from "react-icons/di";
+import { DiJavascript, DiVisualstudio } from "react-icons/di";
 import { FaDocker, FaReact } from "react-icons/fa";
 import {
   RiNextjsFill,
@@ -13,13 +13,7 @@ import {
   RiSupabaseFill,
   RiTailwindCssFill,
 } from "react-icons/ri";
-import {
-  SiExpress,
-  SiPostgresql,
-  SiTypescript,
-  SiVisualstudiocode,
-  SiVite,
-} from "react-icons/si";
+import { SiExpress, SiPostgresql, SiTypescript, SiVite } from "react-icons/si";
 import { GiJesterHat } from "react-icons/gi";
 
 export const skillIcons = {
@@ -36,7 +30,7 @@ export const skillIcons = {
   Express: () => <SiExpress className="w-6 h-6 text-primary" />,
   Git: () => <FaGithub className="w-6 h-6 text-primary" />,
   "Visual Studio Code": () => (
-    <SiVisualstudiocode className="w-6 h-6 text-primary" />
+    <DiVisualstudio className="w-6 h-6 text-primary" />
   ),
   Figma: () => <FaFigma className="w-6 h-6 text-primary" />,
   Supabase: () => <RiSupabaseFill className="w-6 h-6 text-primary" />,

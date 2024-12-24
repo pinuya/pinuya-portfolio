@@ -4,7 +4,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="py-6 text-muted-foreground">
+    <div className="py-6 text-muted-foreground">
       <div className="container flex items-center justify-between">
         <div className="text-sm">
           &copy; 2024 Tifany Alves{" "}
@@ -44,6 +44,6 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

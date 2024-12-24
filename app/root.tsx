@@ -69,13 +69,14 @@ export function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
-      <Nav />
+
       <body className="font-poppins">
+        <Nav />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }

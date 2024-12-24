@@ -1,9 +1,9 @@
 import { Link, useLoaderData } from "@remix-run/react";
 import { ArrowUpRight, SendHorizontal } from "lucide-react";
-import { motion, useScroll, type Variants } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import type { MetaFunction } from "@remix-run/node";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -19,6 +19,13 @@ import ScrollIndicator from "~/components/ScrollIndicator";
 import { DecoderText } from "~/components/decoder-text";
 import ThreeJsParticles from "~/components/ThreeJsParticles.client";
 import { ClientOnly } from "~/components/client-only";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "~/components/ui/carousel";
+import { Card, CardContent } from "~/components/ui/card";
+import Autoplay from "embla-carousel-autoplay";
 
 export const meta: MetaFunction = () => {
   return [
@@ -30,29 +37,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const cardVariants: Variants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 0,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
-    },
-  },
-};
-
 export async function loader() {
-  const [projects, experiences, skills] = await Promise.all([
-    getProjects(),
-    getExperiences(),
-    getSkills(),
-  ]);
+  const [projects, skills] = await Promise.all([getProjects(), getSkills()]);
 
   return {
-    experiences,
     projects,
     skills,
   };
@@ -72,7 +60,9 @@ export default function Main() {
   };
 
   const textAnimation = defaultAnimation(2);
-  const buttonAnimation = defaultAnimation(4);
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   return (
     <div className="flex flex-col min-h-screen w-full">
@@ -206,7 +196,11 @@ export default function Main() {
               <h1 className="text-2xl text-foreground tracking-widest uppercase font-semibold">
                 <DecoderText text={"Olá"} delay={500} />
               </h1>
-              <div className="flex items-center justify-between">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="flex items-center justify-between flex-col sm:flex-row"
+              >
                 <div className="max-w-lg text-muted-foreground">
                   <div className="gap-4 flex flex-col tracking-wide">
                     <p>
@@ -256,13 +250,11 @@ export default function Main() {
                   </div>
                 </div>
 
-                <div className="relative">
-                  {/* Texto em Katakana */}
-                  <p className="absolute rotate-90 top-32 -right-60 font-bold text-9xl text-foreground">
+                <div className="relative p-10 sm:p-0">
+                  <p className="absolute rotate-90 top-32 -right-48 font-bold text-9xl text-foreground sm:-right-60">
                     アンテナ
                   </p>
 
-                  {/* Imagem */}
                   <motion.img
                     src="/assets/aerials.jpg"
                     width="550"
@@ -270,7 +262,7 @@ export default function Main() {
                     alt="aerials profile"
                   />
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           </section>
 
@@ -279,24 +271,34 @@ export default function Main() {
             className="container mx-auto py-12 md:py-16 lg:py-20"
           >
             <div className="space-y-6 md:space-y-8 lg:space-y-10">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-              >
-                {skills.map((s, index) => (
-                  <div key={index} className="flex flex-col items-center gap-2">
-                    <motion.div
-                      whileHover={{ scale: 1.2 }}
-                      className="bg-muted rounded-full p-3"
-                    >
-                      {skillIcons[s.title as keyof typeof skillIcons]?.()}
-                    </motion.div>
-                    <span className="text-sm font-medium text-muted-foreground">
-                      {s.title}
-                    </span>
-                  </div>
-                ))}
+              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                <div className="flex flex-col items-center gap-2">
+                  <Carousel
+                    plugins={[
+                      Autoplay({
+                        delay: 1500,
+                      }),
+                    ]}
+                    className="w-full"
+                  >
+                    <CarouselContent className="-ml-4">
+                      {skills.map((s, index) => (
+                        <CarouselItem
+                          key={index}
+                          className="pl-1 basis-1/6 md:basis-1/2 lg:basis-1/12"
+                        >
+                          <div className="p-1">
+                            <span className="text-2xl font-semibold">
+                              {skillIcons[
+                                s.title as keyof typeof skillIcons
+                              ]?.()}
+                            </span>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
+                </div>
               </motion.div>
             </div>
           </section>
