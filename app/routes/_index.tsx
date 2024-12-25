@@ -14,7 +14,7 @@ import {
 import { Button } from "~/components/ui/button";
 import type { Project } from "~/types";
 import { skillIcons } from "~/consts";
-import { getExperiences, getProjects, getSkills } from "~/models";
+import { getProjects, getSkills } from "~/models";
 import ScrollIndicator from "~/components/ScrollIndicator";
 import { DecoderText } from "~/components/decoder-text";
 import ThreeJsParticles from "~/components/ThreeJsParticles.client";
@@ -24,7 +24,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "~/components/ui/carousel";
-import { Card, CardContent } from "~/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 
 export const meta: MetaFunction = () => {
