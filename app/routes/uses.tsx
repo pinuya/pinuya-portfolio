@@ -84,21 +84,23 @@ export default function Uses() {
         />
       </div>
       <motion.div
-        className="flex gap-6 flex-col mb-4 container"
+        className="flex flex-col gap-6 mb-10 container "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-3xl text-foreground font-semibold">
-          <DecoderText text={"Pagina de Uso"} delay={500} />
-        </h1>
-        <p className="text-muted-foreground">
-          Uma lista um tanto abrangente de ferramentas, aplicativos, hardware e
-          muito mais que uso diariamente para projetar e codificar coisas. Sim,
-          no fundo esta a Raiden Mei de Honkai Impact 3rd.
-        </p>
+        <div className="my-6">
+          <h1 className="text-3xl text-foreground font-semibold">
+            <DecoderText text={"Página de Uso"} delay={500} />
+          </h1>
+          <p className="text-muted-foreground mt-4">
+            Uma lista um tanto abrangente de ferramentas, aplicativos, hardware
+            e muito mais que uso diariamente para projetar e codificar coisas.
+            Sim, no fundo esta a Raiden Mei de Honkai Impact 3rd.
+          </p>
+        </div>
 
-        <div className="">
+        <div className="mb-6">
           <h1 className="text-2xl font-semibold">Design</h1>
           <p className="flex text-muted-foreground mt-4 flex-wrap">
             <ChevronRight className="text-purple-500" /> Para o Design eu uso o
@@ -115,24 +117,25 @@ export default function Uses() {
           </p>
         </div>
 
-        <h1 className="text-2xl font-semibold">Desenvolvimento</h1>
-        {devTools.map((tool, index) => (
-          <p
-            key={index}
-            className="flex items-center text-muted-foreground flex-wrap"
-          >
-            <ChevronRight className="text-purple-500" />
-            <Link to={tool.link} className="whitespace-nowrap">
-              <span className="relative text-purple-400 cursor-pointer group mx-1">
-                {tool.lang}
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 ease-in-out group-hover:w-full" />
-              </span>
-            </Link>
-            <span className="whitespace-normal">
-              {tool.desc.replace(` ${tool.lang},`, "")}
-            </span>
-          </p>
-        ))}
+        <div className="mb-6">
+          <h1 className="text-2xl font-semibold">Desenvolvimento</h1>
+          {devTools.map((tool, index) => (
+            <div key={index} className="my-4">
+              <p className="flex items-center text-muted-foreground flex-wrap">
+                <ChevronRight className="text-purple-500" />
+                <Link to={tool.link} className="whitespace-nowrap">
+                  <span className="relative text-purple-400 cursor-pointer group mx-1">
+                    {tool.lang}
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 ease-in-out group-hover:w-full" />
+                  </span>
+                </Link>
+                <span className="whitespace-normal">
+                  {tool.desc.replace(` ${tool.lang},`, "")}
+                </span>
+              </p>
+            </div>
+          ))}
+        </div>
 
         <h1 className="text-2xl font-semibold ">Sistema</h1>
         {system.map((item, index) => (
