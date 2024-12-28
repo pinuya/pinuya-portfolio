@@ -1,61 +1,29 @@
-# Meu Portfólio Profissional
+<p align="center">
+  <img src="/public/favicon.ico" width="50" alt="Logo" />
+</p>
+<h1 align="center">Personal portfolio</h1>
 
-Meu portifolio profissional <a href="https://pinuya.site/home" target="_blank">pinuya.site</a> which features some of my github projects as well as my resume and technical skills.<br/>
+[![Site preview](/public/assets/portfolioImage.png)](https://pinuya.site)
+My design portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://pinuya.site)
 
-## 🚀 Rodando o Projeto Localmente
-
-Siga os passos abaixo para executar este projeto no seu ambiente local.
-
-### Pré-requisitos
-
-- **Node.js** (versão 16 ou superior)
-- **npm** ou **bun**
-
-### Passos
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/pinuya/pinuya-portfolio.git
-   ```
-
-2. Entre na pasta do projeto:
-
-```bash
-cd pinuya-porfolio
-```
-
-3. Instale as dependências:
+## Install & run
+Make sure you have nodejs `>=22.0.0` or higher and bun `1.1.42` or higher installed. Install dependencies with:
 
 ```bash
 bun install
 ```
 
-4. Inicie o servidor de desenvolvimento:
+Once it's done start up a local server with:
 
 ```bash
-bun run dev
+bun dev
 ```
+## Permissions
 
-5. Acesse o projeto no navegador:
+I'm cool with anyone using the code or parts of the code for their own site, it is open source so people can learn from it and adapt it. However, I would encourage you to modify the theme and components it to make it your own. If you are using the site's design largely unmodified, I'd appreciate being credited as the designer of the website.
 
-```bash
-http://localhost:3000
-```
+I do not give permission to present any of my projects as your own (this is being actively used as my portfolio site and these are my real projects I've worked on).
 
-**Nota**: Se você ainda não instalou o Bun, pode fazer isso executando o comando:
-
-```bash
-curl -fsSL https://bun.sh/install | bash
-```
-
-Após a instalação, certifique-se de que o Bun está funcionando corretamente com:
-
-```bash
-bun --version
-```
-
----
 
 ### Show your support
 
