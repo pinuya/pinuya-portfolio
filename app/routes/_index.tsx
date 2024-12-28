@@ -230,9 +230,10 @@ export default function Main() {
                       .
                     </p>
                     <p>
-                      Nas horas vagas gosto de jogar Roblox e coleciono
-                      Sylvanian Families. Estou sempre disposta a ouvir sobre
-                      novos projetos entao fique à vontade para me escrever.
+                      Nas horas vagas gosto de jogar Roblox, Genshin, LoL e
+                      coleciono Sylvanian Families. Estou sempre disposta a
+                      ouvir sobre novos projetos entao fique à vontade para me
+                      escrever.
                     </p>
                     <a href="/contact">
                       <button
