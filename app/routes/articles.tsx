@@ -47,7 +47,7 @@ export default function Articles() {
             className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40" />
-          <div className="absolute inset-0 flex flex-col items-center justify-end ml-4 gap-3">
+          {/* <div className="absolute inset-0 flex flex-col items-center justify-end ml-4 gap-3">
             <span className="text-sm text-purple-500 self-start">data</span>
             <h1 className="text-white text-3xl sm:text-5xl font-bold text-center self-start">
               titulo
@@ -61,7 +61,7 @@ export default function Articles() {
             <Button variant={"ghost"} className="text-purple-500 self-start">
               <ChevronRight /> Leia Mais
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
