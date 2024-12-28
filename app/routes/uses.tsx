@@ -76,7 +76,7 @@ export default function Uses() {
     <div className="flex flex-col items-center justify-center">
       <div>
         <img
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-10"
+          className="fixed top-0 left-0 w-full h-full object-cover opacity-10"
           src="/assets/raiden.gif"
           width="550"
           height="550"

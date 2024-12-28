@@ -72,7 +72,10 @@ export function App() {
 
       <body className="font-poppins">
         <Nav />
-        <Outlet />
+
+        <div className="pt-20">
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <Footer />
