@@ -8,11 +8,15 @@ import { vercelPreset } from "@vercel/remix/vite"
 installGlobals()
 
 export default defineConfig({
+	
 	plugins: [
+		
 		remix({
 			presets: [vercelPreset()],
 		}),
 		tsconfigPaths(),
 		svgr(),
 	],
+
+	
 })
